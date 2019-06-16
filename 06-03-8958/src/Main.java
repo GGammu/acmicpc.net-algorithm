@@ -32,10 +32,31 @@ public class Main {
 		
 		int n = Integer.parseInt(br.readLine());
 		String[] answers = new String[n];
+		int score = 1;
+		int[] scores = new int[n]; 
 		
 		for (int i = 0; i < n; i++) {
-			
+			answers[i] = br.readLine();
 		}
+		
+		for (int i = 0; i < n; i++) {			
+			score = 1;
+			for (int j = 0; j < answers[i].length(); j++) {
+				if (answers[i].charAt(j) == 'O') {
+					scores[i] += score;
+					score++;
+				} else {
+					score = 1;
+				}
+			}
+		}
+		
+		for (int i = 0; i < scores.length; i++) {
+			bw.write(String.valueOf(scores[i]));
+			bw.newLine();
+		}
+		
+		bw.flush();
 	}
 	
 }
