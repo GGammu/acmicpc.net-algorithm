@@ -1,7 +1,11 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		/*
 		 * 그룹 단어란 단어에 존재하는 모든 문자에 대해서, 각 문자가 연속해서 나타나는 경우만을 말한다. 예를 들면, ccazzzzbb는 c, a, z, b가 모두 연속해서 나타나고, kin도 k, i, n이 연속해서 나타나기 때문에 그룹 단어이지만, aabbbccb는 b가 떨어져서 나타나기 때문에 그룹 단어가 아니다.
 		 * 단어 N개를 입력으로 받아 그룹 단어의 개수를 출력하는 프로그램을 작성하시오.
@@ -16,31 +20,37 @@ public class Main {
 		 * 3
 		 */
 		
-		String a = "test";
-		String checked = "";
-		int groupCnt = 0;
-		String position = "";
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		for (int i = 0; i < a.length(); i++) {
-			if (checked.contains(String.valueOf(a.charAt(i)))) continue;
-			
-			position = "";
-			for (int j = 0; j < a.length(); j++) {
-				if (a.charAt(i) == a.charAt(j)) {
-					position = position.concat("1");
-				} else {
-					position = position.concat("0");
-				}
-			}
-			checked = checked.concat(String.valueOf(a.charAt(i)));
-			
-			if (position.indexOf(a.charAt(i))) {
-				
-			}
-					
-			System.out.println(position);
+		int N = Integer.parseInt(br.readLine());
+		String[] words = new String[N];
+		int groupCnt = 0;
+		
+		for (int i = 0; i < N; i++) {
+			words[i] = br.readLine();
 		}
 		
+		for (int i = 0; i < words.length; i++) {
+			int[] alphabet = new int[26];
+			String word = words[i];
+			boolean group = true;
+			
+			for (int j = 0; j < word.length(); j++) {
+				int al = word.charAt(j) - 97;
+				alphabet[al]++;
+				
+				if (j != 0 && word.charAt(j-1) != word.charAt(j) && alphabet[al] > 1) {
+					group = false;
+					continue;
+				}
+			}
+			
+			if (group) groupCnt++;
+		}
+		
+		bw.write(String.valueOf(groupCnt));
+		bw.flush();
 	}
 	
 }
