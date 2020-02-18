@@ -7,36 +7,36 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * Á¤¼ö N°³·Î ÀÌ·ç¾îÁø ¼ö¿­ A¿Í Á¤¼ö X°¡ ÁÖ¾îÁø´Ù. ÀÌ¶§, A¿¡¼­ Xº¸´Ù ÀÛÀº ¼ö¸¦ ¸ğµÎ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ N°ú X°¡ ÁÖ¾îÁø´Ù. (1 ¡Â N, X ¡Â 10,000)
-		 * µÑÂ° ÁÙ¿¡ ¼ö¿­ A¸¦ ÀÌ·ç´Â Á¤¼ö N°³°¡ ÁÖ¾îÁø´Ù. ÁÖ¾îÁö´Â Á¤¼ö´Â ¸ğµÎ 1º¸´Ù Å©°Å³ª °°°í, 10,000º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
-		 * Xº¸´Ù ÀÛÀº ¼ö¸¦ ÀÔ·Â¹ŞÀº ¼ø¼­´ë·Î °ø¹éÀ¸·Î ±¸ºĞÇØ Ãâ·ÂÇÑ´Ù. Xº¸´Ù ÀÛÀº ¼ö´Â Àû¾îµµ ÇÏ³ª Á¸ÀçÇÑ´Ù.
-		 * 
+		 * ì •ìˆ˜ Nê°œë¡œ ì´ë£¨ì–´ì§„ ìˆ˜ì—´ Aì™€ ì •ìˆ˜ Xê°€ ì£¼ì–´ì§„ë‹¤. ì´ë•Œ, Aì—ì„œ Xë³´ë‹¤ ì‘ì€ ìˆ˜ë¥¼ ëª¨ë‘ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— Nê³¼ Xê°€ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ N, X â‰¤ 10,000)
+		 * ë‘˜ì§¸ ì¤„ì— ìˆ˜ì—´ Aë¥¼ ì´ë£¨ëŠ” ì •ìˆ˜ Nê°œê°€ ì£¼ì–´ì§„ë‹¤. ì£¼ì–´ì§€ëŠ” ì •ìˆ˜ëŠ” ëª¨ë‘ 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 10,000ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
+		 * Xë³´ë‹¤ ì‘ì€ ìˆ˜ë¥¼ ì…ë ¥ë°›ì€ ìˆœì„œëŒ€ë¡œ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ ì¶œë ¥í•œë‹¤. Xë³´ë‹¤ ì‘ì€ ìˆ˜ëŠ” ì ì–´ë„ í•˜ë‚˜ ì¡´ì¬í•œë‹¤.
+		 *
 		 * 10 5
 		 * 1 10 4 9 2 3 8 5 7 6
-		 * 
+		 *
 		 * 1 4 2 3
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		String[] firstValues = null;
 		String[] secondValues = null;
-		
+
 		try {
 			firstValues = br.readLine().split(" ");
 			secondValues = br.readLine().split(" ");
-			
+
 			for (int i = 0; i < Integer.parseInt(firstValues[0]); i++) {
 				if (Integer.parseInt(secondValues[i]) >= Integer.parseInt(firstValues[1])) continue;
-				
+
 				bw.write(secondValues[i] + " ");
 			}
-			
+
 			bw.flush();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
-	
+
 }

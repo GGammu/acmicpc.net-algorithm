@@ -7,29 +7,29 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		 * ´ÙÀåÁ¶´Â c d e f g a b C, ÃÑ 8°³ À½À¸·Î ÀÌ·ç¾îÁ®ÀÖ´Ù. ÀÌ ¹®Á¦¿¡¼­ 8°³ À½Àº ´ÙÀ½°ú °°ÀÌ ¼ıÀÚ·Î ¹Ù²Ù¾î Ç¥ÇöÇÑ´Ù. c´Â 1·Î, d´Â 2·Î, ..., C¸¦ 8·Î ¹Ù²Û´Ù.
-		 * 1ºÎÅÍ 8±îÁö Â÷·Ê´ë·Î ¿¬ÁÖÇÑ´Ù¸é ascending, 8ºÎÅÍ 1±îÁö Â÷·Ê´ë·Î ¿¬ÁÖÇÑ´Ù¸é descending, µÑ ´Ù ¾Æ´Ï¶ó¸é mixed ÀÌ´Ù.
-		 * ¿¬ÁÖÇÑ ¼ø¼­°¡ ÁÖ¾îÁ³À» ¶§, ÀÌ°ÍÀÌ ascendingÀÎÁö, descendingÀÎÁö, ¾Æ´Ï¸é mixedÀÎÁö ÆÇº°ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ 8°³ ¼ıÀÚ°¡ ÁÖ¾îÁø´Ù. ÀÌ ¼ıÀÚ´Â ¹®Á¦ ¼³¸í¿¡¼­ ¼³¸íÇÑ À½ÀÌ¸ç, 1ºÎÅÍ 8±îÁö ¼ıÀÚ°¡ ÇÑ ¹ø¾¿ µîÀåÇÑ´Ù.
-		 * Ã¹Â° ÁÙ¿¡ ascending, descending, mixed Áß ÇÏ³ª¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ë‹¤ì¥ì¡°ëŠ” c d e f g a b C, ì´ 8ê°œ ìŒìœ¼ë¡œ ì´ë£¨ì–´ì ¸ìˆë‹¤. ì´ ë¬¸ì œì—ì„œ 8ê°œ ìŒì€ ë‹¤ìŒê³¼ ê°™ì´ ìˆ«ìë¡œ ë°”ê¾¸ì–´ í‘œí˜„í•œë‹¤. cëŠ” 1ë¡œ, dëŠ” 2ë¡œ, ..., Cë¥¼ 8ë¡œ ë°”ê¾¼ë‹¤.
+		 * 1ë¶€í„° 8ê¹Œì§€ ì°¨ë¡€ëŒ€ë¡œ ì—°ì£¼í•œë‹¤ë©´ ascending, 8ë¶€í„° 1ê¹Œì§€ ì°¨ë¡€ëŒ€ë¡œ ì—°ì£¼í•œë‹¤ë©´ descending, ë‘˜ ë‹¤ ì•„ë‹ˆë¼ë©´ mixed ì´ë‹¤.
+		 * ì—°ì£¼í•œ ìˆœì„œê°€ ì£¼ì–´ì¡Œì„ ë•Œ, ì´ê²ƒì´ ascendingì¸ì§€, descendingì¸ì§€, ì•„ë‹ˆë©´ mixedì¸ì§€ íŒë³„í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— 8ê°œ ìˆ«ìê°€ ì£¼ì–´ì§„ë‹¤. ì´ ìˆ«ìëŠ” ë¬¸ì œ ì„¤ëª…ì—ì„œ ì„¤ëª…í•œ ìŒì´ë©°, 1ë¶€í„° 8ê¹Œì§€ ìˆ«ìê°€ í•œ ë²ˆì”© ë“±ì¥í•œë‹¤.
+		 * ì²«ì§¸ ì¤„ì— ascending, descending, mixed ì¤‘ í•˜ë‚˜ë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 1 2 3 4 5 6 7 8
-		 * 
+		 *
 		 * ascending
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		String value = br.readLine();
 		String[] values = value.split(" ");
-		
+
 		char lastChr = ' ';
 		char curChr = ' ';
-		
+
 		for (int i = 0; i < values.length - 1; i++) {
 			lastChr = curChr;
-			
+
 			if ((Integer.parseInt(values[i]) - Integer.parseInt(values[i + 1])) > 0) {
 				curChr = '-';
 			} else if ((Integer.parseInt(values[i]) - Integer.parseInt(values[i + 1])) < 0) {
@@ -37,15 +37,15 @@ public class Main {
 			} else {
 				curChr = ' ';
 			}
-			
+
 			if (i == 0) continue;
-			
+
 			if (lastChr != curChr) {
-				lastChr = ' '; 
+				lastChr = ' ';
 				break;
 			}
 		}
-		
+
 		switch (lastChr) {
 			case '+':
 				bw.write("ascending");
@@ -59,8 +59,8 @@ public class Main {
 			default:
 				break;
 		}
-		
+
 		bw.flush();
 	}
-	
+
 }

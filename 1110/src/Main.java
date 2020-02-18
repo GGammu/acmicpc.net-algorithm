@@ -7,45 +7,45 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		 * 0º¸´Ù Å©°Å³ª °°°í, 99º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼ö°¡ ÁÖ¾îÁú ¶§ ´ÙÀ½°ú °°Àº ¿¬»êÀ» ÇÒ ¼ö ÀÖ´Ù. ¸ÕÀú ÁÖ¾îÁø ¼ö°¡ 10º¸´Ù ÀÛ´Ù¸é ¾Õ¿¡ 0À» ºÙ¿© µÎ ÀÚ¸® ¼ö·Î ¸¸µé°í, °¢ ÀÚ¸®ÀÇ ¼ýÀÚ¸¦ ´õÇÑ´Ù. ±× ´ÙÀ½, ÁÖ¾îÁø ¼öÀÇ °¡Àå ¿À¸¥ÂÊ ÀÚ¸® ¼ö¿Í ¾Õ¿¡¼­ ±¸ÇÑ ÇÕÀÇ °¡Àå ¿À¸¥ÂÊ ÀÚ¸® ¼ö¸¦ ÀÌ¾î ºÙÀÌ¸é »õ·Î¿î ¼ö¸¦ ¸¸µé ¼ö ÀÖ´Ù. ´ÙÀ½ ¿¹¸¦ º¸ÀÚ.
-		 * 26ºÎÅÍ ½ÃÀÛÇÑ´Ù. 2+6 = 8ÀÌ´Ù. »õ·Î¿î ¼ö´Â 68ÀÌ´Ù. 6+8 = 14ÀÌ´Ù. »õ·Î¿î ¼ö´Â 84ÀÌ´Ù. 8+4 = 12ÀÌ´Ù. »õ·Î¿î ¼ö´Â 42ÀÌ´Ù. 4+2 = 6ÀÌ´Ù. »õ·Î¿î ¼ö´Â 26ÀÌ´Ù.
-		 * À§ÀÇ ¿¹´Â 4¹ø¸¸¿¡ ¿ø·¡ ¼ö·Î µ¹¾Æ¿Ã ¼ö ÀÖ´Ù. µû¶ó¼­ 26ÀÇ »çÀÌÅ¬ÀÇ ±æÀÌ´Â 4ÀÌ´Ù.
-		 * NÀÌ ÁÖ¾îÁ³À» ¶§, NÀÇ »çÀÌÅ¬ÀÇ ±æÀÌ¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ NÀÌ ÁÖ¾îÁø´Ù. NÀº 0º¸´Ù Å©°Å³ª °°°í, 99º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
-		 * Ã¹Â° ÁÙ¿¡ NÀÇ »çÀÌÅ¬ ±æÀÌ¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * 0ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 99ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ê°€ ì£¼ì–´ì§ˆ ë•Œ ë‹¤ìŒê³¼ ê°™ì€ ì—°ì‚°ì„ í•  ìˆ˜ ìžˆë‹¤. ë¨¼ì € ì£¼ì–´ì§„ ìˆ˜ê°€ 10ë³´ë‹¤ ìž‘ë‹¤ë©´ ì•žì— 0ì„ ë¶™ì—¬ ë‘ ìžë¦¬ ìˆ˜ë¡œ ë§Œë“¤ê³ , ê° ìžë¦¬ì˜ ìˆ«ìžë¥¼ ë”í•œë‹¤. ê·¸ ë‹¤ìŒ, ì£¼ì–´ì§„ ìˆ˜ì˜ ê°€ìž¥ ì˜¤ë¥¸ìª½ ìžë¦¬ ìˆ˜ì™€ ì•žì—ì„œ êµ¬í•œ í•©ì˜ ê°€ìž¥ ì˜¤ë¥¸ìª½ ìžë¦¬ ìˆ˜ë¥¼ ì´ì–´ ë¶™ì´ë©´ ìƒˆë¡œìš´ ìˆ˜ë¥¼ ë§Œë“¤ ìˆ˜ ìžˆë‹¤. ë‹¤ìŒ ì˜ˆë¥¼ ë³´ìž.
+		 * 26ë¶€í„° ì‹œìž‘í•œë‹¤. 2+6 = 8ì´ë‹¤. ìƒˆë¡œìš´ ìˆ˜ëŠ” 68ì´ë‹¤. 6+8 = 14ì´ë‹¤. ìƒˆë¡œìš´ ìˆ˜ëŠ” 84ì´ë‹¤. 8+4 = 12ì´ë‹¤. ìƒˆë¡œìš´ ìˆ˜ëŠ” 42ì´ë‹¤. 4+2 = 6ì´ë‹¤. ìƒˆë¡œìš´ ìˆ˜ëŠ” 26ì´ë‹¤.
+		 * ìœ„ì˜ ì˜ˆëŠ” 4ë²ˆë§Œì— ì›ëž˜ ìˆ˜ë¡œ ëŒì•„ì˜¬ ìˆ˜ ìžˆë‹¤. ë”°ë¼ì„œ 26ì˜ ì‚¬ì´í´ì˜ ê¸¸ì´ëŠ” 4ì´ë‹¤.
+		 * Nì´ ì£¼ì–´ì¡Œì„ ë•Œ, Nì˜ ì‚¬ì´í´ì˜ ê¸¸ì´ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— Nì´ ì£¼ì–´ì§„ë‹¤. Nì€ 0ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 99ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
+		 * ì²«ì§¸ ì¤„ì— Nì˜ ì‚¬ì´í´ ê¸¸ì´ë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 26
-		 * 
+		 *
 		 * 4
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		String N = "";
 		String result = "";
 		String rtn = "";
 		int cycle = 0;
-		
+
 		N = br.readLine();
-		
+
 		while (!N.equals(rtn)) {
 			if (cycle == 0) rtn = N;
-			
+
 			if (rtn.length() <= 1) rtn = "0" + rtn;
-			
+
 			result = String.valueOf((Integer.parseInt(rtn.substring(0, 1)) + Integer.parseInt(rtn.substring(1, 2))));
-			
+
 			if (rtn.substring(1, 2).equals("0"))
-				rtn = result.substring(result.length() -1, result.length());	
+				rtn = result.substring(result.length() -1, result.length());
 			else
 				rtn = rtn.substring(1, 2) + result.substring(result.length() -1, result.length());
-			
+
 			cycle++;
 		}
-		
+
 		bw.write(String.valueOf(cycle));
 		bw.flush();
 	}
-	
+
 }

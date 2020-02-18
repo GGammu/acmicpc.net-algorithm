@@ -4,37 +4,37 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö T°¡ ÁÖ¾îÁø´Ù.
-		 * °¢ Å×½ºÆ® ÄÉÀÌ½º´Â ÇÑ ÁÙ·Î ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, °¢ ÁÙ¿¡ A¿Í B°¡ ÁÖ¾îÁø´Ù. (0 < A, B < 10)
-		 * °¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù A+B¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜ Tê°€ ì£¼ì–´ì§„ë‹¤.
+		 * ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ëŠ” í•œ ì¤„ë¡œ ì´ë£¨ì–´ì ¸ ìˆìœ¼ë©°, ê° ì¤„ì— Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. (0 < A, B < 10)
+		 * ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë§ˆë‹¤ A+Bë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 5
 		 * 1 1
 		 * 2 3
 		 * 3 4
 		 * 9 8
 		 * 5 2
-		 * 
+		 *
 		 * 2
 		 * 5
 		 * 7
 		 * 17
 		 * 7
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
 		int cnt = Integer.parseInt(sc.nextLine());
 		int A = 0;
 		int B = 0;
-		
+
 		String[] values = new String[cnt];
 		String[] nums = new String[2];
-		
+
 		for (int i = 0; i < cnt; i++) {
 			values[i] = sc.nextLine();
 		}
-		
+
 		for (int i = 0; i < values.length; i++) {
 			nums = values[i].split(" ");
 			A = Integer.parseInt(nums[0]);
@@ -42,5 +42,5 @@ public class Main {
 			System.out.println(A + B);
 		}
 	}
-	
+
 }

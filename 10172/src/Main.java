@@ -1,24 +1,24 @@
 
 public class Main {
-	
+
 	public static void main(String[] args) {
 		/*
-		 * ¾Æ·¡ ¿¹Á¦¿Í °°ÀÌ °³¸¦ Ãâ·ÂÇÏ½Ã¿À.
-		 * 
-		 * 
-		 * 
+		 * ì•„ë˜ ì˜ˆì œì™€ ê°™ì´ ê°œë¥¼ ì¶œë ¥í•˜ì‹œì˜¤.
+		 *
+		 *
+		 *
 		 * |\_/|
 		 * |q p|   /}
 		 * ( 0 )"""\
 		 * |"^"`    |
 		 * ||_/=\\__|
 		 */
-		
+
 		System.out.println("|\\_/|");
 		System.out.println("|q p|   /}");
 		System.out.println("( 0 )\"\"\"\\");
 		System.out.println("|\"^\"`    |");
 		System.out.println("||_/=\\\\__|");
 	}
-	
+
 }

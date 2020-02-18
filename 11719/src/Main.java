@@ -3,39 +3,39 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Main {
-	
+
 	public static void main(String[] args) {
 		/*
-		 * ÀÔ·Â ¹ŞÀº ´ë·Î Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * ÀÔ·ÂÀÌ ÁÖ¾îÁø´Ù. ÀÔ·ÂÀº ÃÖ´ë 100ÁÙ·Î ÀÌ·ç¾îÁ® ÀÖ°í, ¾ËÆÄºª ¼Ò¹®ÀÚ, ´ë¹®ÀÚ, °ø¹é, ¼ıÀÚ·Î¸¸ ÀÌ·ç¾îÁ® ÀÖ´Ù. °¢ ÁÙÀº 100±ÛÀÚ¸¦ ³ÑÁö ¾ÊÀ¸¸ç, ºó ÁÙÀÌ ÁÖ¾îÁú ¼öµµ ÀÖ°í, °¢ ÁÙÀÇ ¾Õ µÚ¿¡ °ø¹éÀÌ ÀÖÀ» ¼öµµ ÀÖ´Ù.
-		 * ÀÔ·Â¹ŞÀº ±×´ë·Î Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ì…ë ¥ ë°›ì€ ëŒ€ë¡œ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì…ë ¥ì´ ì£¼ì–´ì§„ë‹¤. ì…ë ¥ì€ ìµœëŒ€ 100ì¤„ë¡œ ì´ë£¨ì–´ì ¸ ìˆê³ , ì•ŒíŒŒë²³ ì†Œë¬¸ì, ëŒ€ë¬¸ì, ê³µë°±, ìˆ«ìë¡œë§Œ ì´ë£¨ì–´ì ¸ ìˆë‹¤. ê° ì¤„ì€ 100ê¸€ìë¥¼ ë„˜ì§€ ì•Šìœ¼ë©°, ë¹ˆ ì¤„ì´ ì£¼ì–´ì§ˆ ìˆ˜ë„ ìˆê³ , ê° ì¤„ì˜ ì• ë’¤ì— ê³µë°±ì´ ìˆì„ ìˆ˜ë„ ìˆë‹¤.
+		 * ì…ë ¥ë°›ì€ ê·¸ëŒ€ë¡œ ì¶œë ¥í•œë‹¤.
+		 *
 		 *    Hello
-		 * 
-		 * Baekjoon 
+		 *
+		 * Baekjoon
 		 * Online Judge
-		 * 
+		 *
 		 *    Hello
-		 * 
-		 * Baekjoon 
+		 *
+		 * Baekjoon
 		 * Online Judge
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
 		ArrayList<String> values = new ArrayList<String>();
 		String value;
-		
+
 		try {
 			int i = 0;
 			while (i++ <= 100) {
 				value = sc.nextLine();
 				values.add(value);
-			}	
+			}
 		} catch (NoSuchElementException e) {
 			for (String string : values) {
 				System.out.println(string);
-			} 
+			}
 		}
 	}
-	
+
 }

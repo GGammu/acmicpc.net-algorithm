@@ -1,34 +1,34 @@
 import java.util.Scanner;
 
 public class Main {
-	
+
 	public static void main(String[] args) {
 		/*
-		 * µÎ ÀÚ¿¬¼ö A¿Í B°¡ ÁÖ¾îÁø´Ù. ÀÌ¶§, A+B, A-B, A*B, A/B(¸ò), A%B(³ª¸ÓÁö)¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * µÎ ÀÚ¿¬¼ö A¿Í B°¡ ÁÖ¾îÁø´Ù. (1 ¡Â A, B ¡Â 10,000)
-		 * Ã¹Â° ÁÙ¿¡ A+B, µÑÂ° ÁÙ¿¡ A-B, ¼ÂÂ° ÁÙ¿¡ A*B, ³İÂ° ÁÙ¿¡ A/B, ´Ù¼¸Â° ÁÙ¿¡ A%B¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ë‘ ìì—°ìˆ˜ Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. ì´ë•Œ, A+B, A-B, A*B, A/B(ëª«), A%B(ë‚˜ë¨¸ì§€)ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ë‘ ìì—°ìˆ˜ Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ A, B â‰¤ 10,000)
+		 * ì²«ì§¸ ì¤„ì— A+B, ë‘˜ì§¸ ì¤„ì— A-B, ì…‹ì§¸ ì¤„ì— A*B, ë„·ì§¸ ì¤„ì— A/B, ë‹¤ì„¯ì§¸ ì¤„ì— A%Bë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 7 3
-		 * 
+		 *
 		 * 10
 		 * 4
 		 * 21
 		 * 2
 		 * 1
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
-		
+
 		String[] values = sc.nextLine().split(" ");
-		
+
 		int a = Integer.parseInt(values[0]);
 		int b = Integer.parseInt(values[1]);
-		
+
 		System.out.println(a + b);
 		System.out.println(a - b);
 		System.out.println(a * b);
 		System.out.println(a / b);
 		System.out.println(a % b);
 	}
-	
+
 }

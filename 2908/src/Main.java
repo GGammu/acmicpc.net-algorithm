@@ -7,39 +7,39 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		 * »ó±ÙÀÌÀÇ µ¿»ý »ó¼ö´Â ¼öÇÐÀ» Á¤¸» ¸øÇÑ´Ù. »ó¼ö´Â ¼ýÀÚ¸¦ ÀÐ´Âµ¥ ¹®Á¦°¡ ÀÖ´Ù. ÀÌ·¸°Ô ¼öÇÐÀ» ¸øÇÏ´Â »ó¼ö¸¦ À§ÇØ¼­ »ó±ÙÀÌ´Â ¼öÀÇ Å©±â¸¦ ºñ±³ÇÏ´Â ¹®Á¦¸¦ ³»ÁÖ¾ú´Ù. »ó±ÙÀÌ´Â ¼¼ ÀÚ¸® ¼ö µÎ °³¸¦ Ä¥ÆÇ¿¡ ½áÁÖ¾ú´Ù. ±× ´ÙÀ½¿¡ Å©±â°¡ Å« ¼ö¸¦ ¸»ÇØº¸¶ó°í Çß´Ù.
-		 * »ó¼ö´Â ¼ö¸¦ ´Ù¸¥ »ç¶÷°ú ´Ù¸£°Ô °Å²Ù·Î ÀÐ´Â´Ù. ¿¹¸¦ µé¾î, 734°ú 893À» Ä¥ÆÇ¿¡ Àû¾ú´Ù¸é, »ó¼ö´Â ÀÌ ¼ö¸¦ 437°ú 398·Î ÀÐ´Â´Ù. µû¶ó¼­, »ó¼ö´Â µÎ ¼öÁß Å« ¼öÀÎ 437À» Å« ¼ö¶ó°í ¸»ÇÒ °ÍÀÌ´Ù.
-		 * µÎ ¼ö°¡ ÁÖ¾îÁ³À» ¶§, »ó¼öÀÇ ´ë´äÀ» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ »ó±ÙÀÌ°¡ Ä¥ÆÇ¿¡ ÀûÀº µÎ ¼ö A¿Í B°¡ ÁÖ¾îÁø´Ù. µÎ ¼ö´Â °°Áö ¾ÊÀº ¼¼ ÀÚ¸® ¼öÀÌ¸ç, 0ÀÌ Æ÷ÇÔµÇ¾î ÀÖÁö ¾Ê´Ù.
-		 * Ã¹Â° ÁÙ¿¡ »ó¼öÀÇ ´ë´äÀ» Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ìƒê·¼ì´ì˜ ë™ìƒ ìƒìˆ˜ëŠ” ìˆ˜í•™ì„ ì •ë§ ëª»í•œë‹¤. ìƒìˆ˜ëŠ” ìˆ«ìžë¥¼ ì½ëŠ”ë° ë¬¸ì œê°€ ìžˆë‹¤. ì´ë ‡ê²Œ ìˆ˜í•™ì„ ëª»í•˜ëŠ” ìƒìˆ˜ë¥¼ ìœ„í•´ì„œ ìƒê·¼ì´ëŠ” ìˆ˜ì˜ í¬ê¸°ë¥¼ ë¹„êµí•˜ëŠ” ë¬¸ì œë¥¼ ë‚´ì£¼ì—ˆë‹¤. ìƒê·¼ì´ëŠ” ì„¸ ìžë¦¬ ìˆ˜ ë‘ ê°œë¥¼ ì¹ íŒì— ì¨ì£¼ì—ˆë‹¤. ê·¸ ë‹¤ìŒì— í¬ê¸°ê°€ í° ìˆ˜ë¥¼ ë§í•´ë³´ë¼ê³  í–ˆë‹¤.
+		 * ìƒìˆ˜ëŠ” ìˆ˜ë¥¼ ë‹¤ë¥¸ ì‚¬ëžŒê³¼ ë‹¤ë¥´ê²Œ ê±°ê¾¸ë¡œ ì½ëŠ”ë‹¤. ì˜ˆë¥¼ ë“¤ì–´, 734ê³¼ 893ì„ ì¹ íŒì— ì ì—ˆë‹¤ë©´, ìƒìˆ˜ëŠ” ì´ ìˆ˜ë¥¼ 437ê³¼ 398ë¡œ ì½ëŠ”ë‹¤. ë”°ë¼ì„œ, ìƒìˆ˜ëŠ” ë‘ ìˆ˜ì¤‘ í° ìˆ˜ì¸ 437ì„ í° ìˆ˜ë¼ê³  ë§í•  ê²ƒì´ë‹¤.
+		 * ë‘ ìˆ˜ê°€ ì£¼ì–´ì¡Œì„ ë•Œ, ìƒìˆ˜ì˜ ëŒ€ë‹µì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— ìƒê·¼ì´ê°€ ì¹ íŒì— ì ì€ ë‘ ìˆ˜ Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. ë‘ ìˆ˜ëŠ” ê°™ì§€ ì•Šì€ ì„¸ ìžë¦¬ ìˆ˜ì´ë©°, 0ì´ í¬í•¨ë˜ì–´ ìžˆì§€ ì•Šë‹¤.
+		 * ì²«ì§¸ ì¤„ì— ìƒìˆ˜ì˜ ëŒ€ë‹µì„ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 734 893
-		 * 
+		 *
 		 * 437
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		String[] num = br.readLine().split(" ");
 		int[] revNum = new int [2];
-		
+
 		for (int i = 0; i < num.length; i++) {
 			String tmp = "";
 			for (int j = num[i].length() - 1; j >= 0; j--) {
 				tmp += num[i].charAt(j);
 			}
-			
+
 			revNum[i] = Integer.parseInt(tmp);
 		}
-		
+
 		if (revNum[0] > revNum[1]) {
 			bw.write(String.valueOf(revNum[0]));
 		} else {
 			bw.write(String.valueOf(revNum[1]));
 		}
-		
+
 		bw.flush();
 	}
-	
+
 }

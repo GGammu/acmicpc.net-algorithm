@@ -7,42 +7,42 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		 * ¾î¶² ¾çÀÇ Á¤¼ö XÀÇ ÀÚ¸®¼ö°¡ µîÂ÷¼ö¿­À» ÀÌ·é´Ù¸é, ±× ¼ö¸¦ ÇÑ¼ö¶ó°í ÇÑ´Ù. µîÂ÷¼ö¿­Àº ¿¬¼ÓµÈ µÎ °³ÀÇ ¼öÀÇ Â÷ÀÌ°¡ ÀÏÁ¤ÇÑ ¼ö¿­À» ¸»ÇÑ´Ù. NÀÌ ÁÖ¾îÁ³À» ¶§, 1º¸´Ù Å©°Å³ª °°°í, Nº¸´Ù ÀÛ°Å³ª °°Àº ÇÑ¼öÀÇ °³¼ö¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À. 
-		 * Ã¹Â° ÁÙ¿¡ 1,000º¸´Ù ÀÛ°Å³ª °°Àº ÀÚ¿¬¼ö NÀÌ ÁÖ¾îÁø´Ù.
-		 * Ã¹Â° ÁÙ¿¡ 1º¸´Ù Å©°Å³ª °°°í, Nº¸´Ù ÀÛ°Å³ª °°Àº ÇÑ¼öÀÇ °³¼ö¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ì–´ë–¤ ì–‘ì˜ ì •ìˆ˜ Xì˜ ìžë¦¬ìˆ˜ê°€ ë“±ì°¨ìˆ˜ì—´ì„ ì´ë£¬ë‹¤ë©´, ê·¸ ìˆ˜ë¥¼ í•œìˆ˜ë¼ê³  í•œë‹¤. ë“±ì°¨ìˆ˜ì—´ì€ ì—°ì†ëœ ë‘ ê°œì˜ ìˆ˜ì˜ ì°¨ì´ê°€ ì¼ì •í•œ ìˆ˜ì—´ì„ ë§í•œë‹¤. Nì´ ì£¼ì–´ì¡Œì„ ë•Œ, 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , Në³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ í•œìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— 1,000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ìžì—°ìˆ˜ Nì´ ì£¼ì–´ì§„ë‹¤.
+		 * ì²«ì§¸ ì¤„ì— 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , Në³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ í•œìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 110
-		 * 
+		 *
 		 * 99
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		String n = "";
 		int cnt = 0;
-		
+
 		n = br.readLine();
-		
+
 		for (int i = 1; i <= Integer.parseInt(n); i++) {
-			if (fun(i)) cnt++; 
+			if (fun(i)) cnt++;
 		}
-		
+
 		bw.write(String.valueOf(cnt));
 		bw.flush();
 	}
-	
+
 	private static boolean fun(int n) {
 		boolean rtn = true;
 		String strN = "";
 		int diff = 0;
-				
+
 		strN = String.valueOf(n);
-		
-		
+
+
 		if (strN.length() < 3) rtn = true;
 		else {
 			for (int i = 0; i < strN.length() - 1 ; i++) {
-				if (i == 0) 
+				if (i == 0)
 					diff = Integer.parseInt(strN.substring(i, i + 1)) - Integer.parseInt(strN.substring(i + 1, i + 2));
 				else {
 					if (diff != Integer.parseInt(strN.substring(i, i + 1)) - Integer.parseInt(strN.substring(i + 1, i + 2))) {
@@ -52,8 +52,8 @@ public class Main {
 				}
 			}
 		}
-		
+
 		return rtn;
 	}
-	
+
 }

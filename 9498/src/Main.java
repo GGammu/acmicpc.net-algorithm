@@ -5,21 +5,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * ½ÃÇè Á¡¼ö¸¦ ÀÔ·Â¹Ş¾Æ 90 ~ 100Á¡Àº A, 80 ~ 89Á¡Àº B, 70 ~ 79Á¡Àº C, 60 ~ 69Á¡Àº D, ³ª¸ÓÁö Á¡¼ö´Â F¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ ½ÃÇè Á¡¼ö°¡ ÁÖ¾îÁø´Ù. ½ÃÇè Á¡¼ö´Â 0º¸´Ù Å©°Å³ª °°°í, 100º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
-		 * ½ÃÇè ¼ºÀûÀ» Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ì‹œí—˜ ì ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ 90 ~ 100ì ì€ A, 80 ~ 89ì ì€ B, 70 ~ 79ì ì€ C, 60 ~ 69ì ì€ D, ë‚˜ë¨¸ì§€ ì ìˆ˜ëŠ” Fë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— ì‹œí—˜ ì ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì‹œí—˜ ì ìˆ˜ëŠ” 0ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 100ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
+		 * ì‹œí—˜ ì„±ì ì„ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 100
-		 * 
+		 *
 		 * A
 		 */
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int value = 0;
 		String rtn = "";
-		
+
 		try {
 			value = Integer.parseInt(br.readLine());
-			
+
 			if (90 <= value && value <= 100) {
 				rtn = "A";
 			} else if (80 <= value && value <= 89) {
@@ -31,11 +31,11 @@ public class Main {
 			} else {
 				rtn = "F";
 			}
-			
+
 			System.out.println(rtn);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
-	
+
 }

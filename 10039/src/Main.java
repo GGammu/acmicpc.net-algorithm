@@ -7,39 +7,39 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		 * »óÇöÀÌ°¡ °¡¸£Ä¡´Â ¾ÆÀÌÆù ¾Û °³¹ß ¼ö¾÷ÀÇ ¼ö°­»ýÀº ¿ø¼·, ¼¼Èñ, »ó±Ù, ¼þ, °­¼öÀÌ´Ù.
-		 * ¾îÁ¦ ÀÌ ¼ö¾÷ÀÇ ±â¸»°í»ç°¡ ÀÖ¾ú°í, »óÇöÀÌ´Â Áö±Ý ÇÐ»ýµéÀÇ ±â¸»°í»ç ½ÃÇèÁö¸¦ Ã¤Á¡ÇÏ°í ÀÖ´Ù. ±â¸»°í»ç Á¡¼ö°¡ 40Á¡ ÀÌ»óÀÎ ÇÐ»ýµéÀº ±× Á¡¼ö ±×´ë·Î ÀÚ½ÅÀÇ ¼ºÀûÀÌ µÈ´Ù. ÇÏÁö¸¸, 40Á¡ ¹Ì¸¸ÀÎ ÇÐ»ýµéÀº º¸ÃæÇÐ½ÀÀ» µè´Â Á¶°ÇÀ» ¼ö¶ôÇÏ¸é 40Á¡À» ¹Þ°Ô µÈ´Ù. º¸ÃæÇÐ½ÀÀº °ÅºÎÇÒ ¼ö ¾ø±â ¶§¹®¿¡, 40Á¡ ¹Ì¸¸ÀÎ ÇÐ»ýµéÀº Ç×»ó 40Á¡À» ¹Þ°Ô µÈ´Ù.
-		 * ÇÐ»ý 5¸íÀÇ Á¡¼ö°¡ ÁÖ¾îÁ³À» ¶§, Æò±Õ Á¡¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * ÀÔ·ÂÀº ÃÑ 5ÁÙ·Î ÀÌ·ç¾îÁ® ÀÖ°í, ¿ø¼·ÀÌÀÇ Á¡¼ö, ¼¼ÈñÀÇ Á¡¼ö, »ó±ÙÀÌÀÇ Á¡¼ö, ¼þÀÌÀÇ Á¡¼ö, °­¼öÀÇ Á¡¼ö°¡ ¼ø¼­´ë·Î ÁÖ¾îÁø´Ù.
-		 * Á¡¼ö´Â ¸ðµÎ 0Á¡ ÀÌ»ó, 100Á¡ ÀÌÇÏÀÎ 5ÀÇ ¹è¼öÀÌ´Ù. µû¶ó¼­, Æò±Õ Á¡¼ö´Â Ç×»ó Á¤¼öÀÌ´Ù.
-		 * Ã¹Â° ÁÙ¿¡ ÇÐ»ý 5¸íÀÇ Æò±Õ Á¡¼ö¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ìƒí˜„ì´ê°€ ê°€ë¥´ì¹˜ëŠ” ì•„ì´í° ì•± ê°œë°œ ìˆ˜ì—…ì˜ ìˆ˜ê°•ìƒì€ ì›ì„­, ì„¸í¬, ìƒê·¼, ìˆ­, ê°•ìˆ˜ì´ë‹¤.
+		 * ì–´ì œ ì´ ìˆ˜ì—…ì˜ ê¸°ë§ê³ ì‚¬ê°€ ìžˆì—ˆê³ , ìƒí˜„ì´ëŠ” ì§€ê¸ˆ í•™ìƒë“¤ì˜ ê¸°ë§ê³ ì‚¬ ì‹œí—˜ì§€ë¥¼ ì±„ì í•˜ê³  ìžˆë‹¤. ê¸°ë§ê³ ì‚¬ ì ìˆ˜ê°€ 40ì  ì´ìƒì¸ í•™ìƒë“¤ì€ ê·¸ ì ìˆ˜ ê·¸ëŒ€ë¡œ ìžì‹ ì˜ ì„±ì ì´ ëœë‹¤. í•˜ì§€ë§Œ, 40ì  ë¯¸ë§Œì¸ í•™ìƒë“¤ì€ ë³´ì¶©í•™ìŠµì„ ë“£ëŠ” ì¡°ê±´ì„ ìˆ˜ë½í•˜ë©´ 40ì ì„ ë°›ê²Œ ëœë‹¤. ë³´ì¶©í•™ìŠµì€ ê±°ë¶€í•  ìˆ˜ ì—†ê¸° ë•Œë¬¸ì—, 40ì  ë¯¸ë§Œì¸ í•™ìƒë“¤ì€ í•­ìƒ 40ì ì„ ë°›ê²Œ ëœë‹¤.
+		 * í•™ìƒ 5ëª…ì˜ ì ìˆ˜ê°€ ì£¼ì–´ì¡Œì„ ë•Œ, í‰ê·  ì ìˆ˜ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ìž…ë ¥ì€ ì´ 5ì¤„ë¡œ ì´ë£¨ì–´ì ¸ ìžˆê³ , ì›ì„­ì´ì˜ ì ìˆ˜, ì„¸í¬ì˜ ì ìˆ˜, ìƒê·¼ì´ì˜ ì ìˆ˜, ìˆ­ì´ì˜ ì ìˆ˜, ê°•ìˆ˜ì˜ ì ìˆ˜ê°€ ìˆœì„œëŒ€ë¡œ ì£¼ì–´ì§„ë‹¤.
+		 * ì ìˆ˜ëŠ” ëª¨ë‘ 0ì  ì´ìƒ, 100ì  ì´í•˜ì¸ 5ì˜ ë°°ìˆ˜ì´ë‹¤. ë”°ë¼ì„œ, í‰ê·  ì ìˆ˜ëŠ” í•­ìƒ ì •ìˆ˜ì´ë‹¤.
+		 * ì²«ì§¸ ì¤„ì— í•™ìƒ 5ëª…ì˜ í‰ê·  ì ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 10
 		 * 65
 		 * 100
 		 * 30
 		 * 95
-		 * 
+		 *
 		 * 68
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		int[] scores = new int[5];
 		int tmp = 0;
 		int sum = 0;
-		
+
 		for (int i = 0; i < 5; i++) {
 			tmp = Integer.parseInt(br.readLine());
-			
+
 			if (tmp < 40) tmp = 40;
-			
+
 			sum += tmp;
 		}
-		
+
 		bw.write(String.valueOf(sum / 5));
 		bw.flush();
 	}
-	
+
 }

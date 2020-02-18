@@ -4,54 +4,54 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Main {
-	
+
 	public static void main(String[] args) {
 		/*
-		 * ¼¼ÁØÀÌ´Â ±â¸»°í»ç¸¦ ¸ÁÃÆ´Ù. ¼¼ÁØÀÌ´Â Á¡¼ö¸¦ Á¶ÀÛÇØ¼­ Áý¿¡ °¡Á®°¡±â·Î Çß´Ù. ÀÏ´Ü ¼¼ÁØÀÌ´Â ÀÚ±â Á¡¼ö Áß¿¡ ÃÖ´ñ°ªÀ» °ñ¶ú´Ù. ÀÌ °ªÀ» MÀÌ¶ó°í ÇÑ´Ù. ±×¸®°í ³ª¼­ ¸ðµç Á¡¼ö¸¦ Á¡¼ö/M*100À¸·Î °íÃÆ´Ù.
-		 * ¿¹¸¦ µé¾î, ¼¼ÁØÀÌÀÇ ÃÖ°íÁ¡ÀÌ 70ÀÌ°í, ¼öÇÐÁ¡¼ö°¡ 50ÀÌ¾úÀ¸¸é ¼öÇÐÁ¡¼ö´Â 50/70*100ÀÌ µÇ¾î 71.43Á¡ÀÌ µÈ´Ù.
- 		 * ¼¼ÁØÀÌÀÇ ¼ºÀûÀ» À§ÀÇ ¹æ¹ý´ë·Î »õ·Î °è»êÇßÀ» ¶§, »õ·Î¿î Æò±ÕÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
- 		 * Ã¹Â° ÁÙ¿¡ ½ÃÇè º» °ú¸ñÀÇ °³¼ö NÀÌ ÁÖ¾îÁø´Ù. ÀÌ °ªÀº 1000º¸´Ù ÀÛ°Å³ª °°´Ù. µÑÂ° ÁÙ¿¡ ¼¼ÁØÀÌÀÇ ÇöÀç ¼ºÀûÀÌ ÁÖ¾îÁø´Ù. ÀÌ °ªÀº 100º¸´Ù ÀÛ°Å³ª °°Àº À½ÀÌ ¾Æ´Ñ Á¤¼öÀÌ°í, Àû¾îµµ ÇÏ³ªÀÇ °ªÀº 0º¸´Ù Å©´Ù.
- 		 * Ã¹Â° ÁÙ¿¡ »õ·Î¿î Æò±ÕÀ» Ãâ·ÂÇÑ´Ù. Á¤´ä°úÀÇ Àý´ë/»ó´ë ¿ÀÂ÷´Â 10-2±îÁö Çã¿ëÇÑ´Ù.
- 		 * 
+		 * ì„¸ì¤€ì´ëŠ” ê¸°ë§ê³ ì‚¬ë¥¼ ë§ì³¤ë‹¤. ì„¸ì¤€ì´ëŠ” ì ìˆ˜ë¥¼ ì¡°ìž‘í•´ì„œ ì§‘ì— ê°€ì ¸ê°€ê¸°ë¡œ í–ˆë‹¤. ì¼ë‹¨ ì„¸ì¤€ì´ëŠ” ìžê¸° ì ìˆ˜ ì¤‘ì— ìµœëŒ“ê°’ì„ ê³¨ëžë‹¤. ì´ ê°’ì„ Mì´ë¼ê³  í•œë‹¤. ê·¸ë¦¬ê³  ë‚˜ì„œ ëª¨ë“  ì ìˆ˜ë¥¼ ì ìˆ˜/M*100ìœ¼ë¡œ ê³ ì³¤ë‹¤.
+		 * ì˜ˆë¥¼ ë“¤ì–´, ì„¸ì¤€ì´ì˜ ìµœê³ ì ì´ 70ì´ê³ , ìˆ˜í•™ì ìˆ˜ê°€ 50ì´ì—ˆìœ¼ë©´ ìˆ˜í•™ì ìˆ˜ëŠ” 50/70*100ì´ ë˜ì–´ 71.43ì ì´ ëœë‹¤.
+ 		 * ì„¸ì¤€ì´ì˜ ì„±ì ì„ ìœ„ì˜ ë°©ë²•ëŒ€ë¡œ ìƒˆë¡œ ê³„ì‚°í–ˆì„ ë•Œ, ìƒˆë¡œìš´ í‰ê· ì„ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+ 		 * ì²«ì§¸ ì¤„ì— ì‹œí—˜ ë³¸ ê³¼ëª©ì˜ ê°œìˆ˜ Nì´ ì£¼ì–´ì§„ë‹¤. ì´ ê°’ì€ 1000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ë‹¤. ë‘˜ì§¸ ì¤„ì— ì„¸ì¤€ì´ì˜ í˜„ìž¬ ì„±ì ì´ ì£¼ì–´ì§„ë‹¤. ì´ ê°’ì€ 100ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ìŒì´ ì•„ë‹Œ ì •ìˆ˜ì´ê³ , ì ì–´ë„ í•˜ë‚˜ì˜ ê°’ì€ 0ë³´ë‹¤ í¬ë‹¤.
+ 		 * ì²«ì§¸ ì¤„ì— ìƒˆë¡œìš´ í‰ê· ì„ ì¶œë ¥í•œë‹¤. ì •ë‹µê³¼ì˜ ì ˆëŒ€/ìƒëŒ€ ì˜¤ì°¨ëŠ” 10-2ê¹Œì§€ í—ˆìš©í•œë‹¤.
+ 		 *
  		 * 3
 		 * 40 80 60
-		 * 
+		 *
 		 * 75.00
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int subjectCnt = 0;
-		
+
 		StringTokenizer st = null;
-		
+
 		ArrayList<Integer> subjectPoints = new ArrayList<Integer>();
-		
+
 		int maxPoint = 0;
 		Double totalPoints = 0.00D;
-		
+
 		try {
 			subjectCnt= Integer.parseInt(br.readLine());
 			st = new StringTokenizer(br.readLine(), " ");
-			
+
 			for (int i = 0; i < subjectCnt; i++) {
-				subjectPoints.add(Integer.parseInt(st.nextToken())); 
+				subjectPoints.add(Integer.parseInt(st.nextToken()));
 			}
-			
+
 			maxPoint = subjectPoints.get(0);
 			for (int i = 1; i < subjectCnt; i++) {
 				if (maxPoint < subjectPoints.get(i)) maxPoint = subjectPoints.get(i);
 			}
-			
+
 			for (int i = 0; i < subjectCnt; i++) {
 				totalPoints += (double) subjectPoints.get(i) / maxPoint * 100;
 			}
-			
+
 			System.out.println(totalPoints / subjectCnt);
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+
 	}
-	
+
 }

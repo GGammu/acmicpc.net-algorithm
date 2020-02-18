@@ -4,12 +4,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * NÀ» ÀÔ·Â¹ÞÀº µÚ, ±¸±¸´Ü N´ÜÀ» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À. Ãâ·Â Çü½Ä¿¡ ¸ÂÃç¼­ Ãâ·ÂÇÏ¸é µÈ´Ù.
-		 * Ã¹Â° ÁÙ¿¡ NÀÌ ÁÖ¾îÁø´Ù. NÀº 1º¸´Ù Å©°Å³ª °°°í, 9º¸´Ù ÀÛ°Å³ª °°´Ù.
-		 * Ãâ·ÂÇü½Ä°ú °°°Ô N*1ºÎÅÍ N*9±îÁö Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * Nì„ ìž…ë ¥ë°›ì€ ë’¤, êµ¬êµ¬ë‹¨ Në‹¨ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤. ì¶œë ¥ í˜•ì‹ì— ë§žì¶°ì„œ ì¶œë ¥í•˜ë©´ ëœë‹¤.
+		 * ì²«ì§¸ ì¤„ì— Nì´ ì£¼ì–´ì§„ë‹¤. Nì€ 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 9ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ë‹¤.
+		 * ì¶œë ¥í˜•ì‹ê³¼ ê°™ê²Œ N*1ë¶€í„° N*9ê¹Œì§€ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 2
-		 * 
+		 *
   		 * 2 * 1 = 2
 		 * 2 * 2 = 4
 		 * 2 * 3 = 6
@@ -20,14 +20,14 @@ public class Main {
 		 * 2 * 8 = 16
 		 * 2 * 9 = 18
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
-		
+
 		String value = sc.nextLine();
-		
+
 		for (int i = 1; i <= 9; i++) {
 			System.out.println(value + " * " + i + " = " + Integer.parseInt(value) * i);
 		}
 	}
-	
+
 }

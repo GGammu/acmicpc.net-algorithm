@@ -5,33 +5,33 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * N°³ÀÇ ¼ıÀÚ°¡ °ø¹é ¾øÀÌ ¾²¿©ÀÖ´Ù. ÀÌ ¼ıÀÚ¸¦ ¸ğµÎ ÇÕÇØ¼­ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ ¼ıÀÚÀÇ °³¼ö N (1 ¡Â N ¡Â 100)ÀÌ ÁÖ¾îÁø´Ù. µÑÂ° ÁÙ¿¡ ¼ıÀÚ N°³°¡ °ø¹é¾øÀÌ ÁÖ¾îÁø´Ù.
-		 * ÀÔ·ÂÀ¸·Î ÁÖ¾îÁø ¼ıÀÚ N°³ÀÇ ÇÕÀ» Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * Nê°œì˜ ìˆ«ìê°€ ê³µë°± ì—†ì´ ì“°ì—¬ìˆë‹¤. ì´ ìˆ«ìë¥¼ ëª¨ë‘ í•©í•´ì„œ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— ìˆ«ìì˜ ê°œìˆ˜ N (1 â‰¤ N â‰¤ 100)ì´ ì£¼ì–´ì§„ë‹¤. ë‘˜ì§¸ ì¤„ì— ìˆ«ì Nê°œê°€ ê³µë°±ì—†ì´ ì£¼ì–´ì§„ë‹¤.
+		 * ì…ë ¥ìœ¼ë¡œ ì£¼ì–´ì§„ ìˆ«ì Nê°œì˜ í•©ì„ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 1
 		 * 1
-		 * 
+		 *
 		 * 1
 		 */
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int cnt = 0;
 		String inputNum = "";
 		int sum = 0;
-		
-		
+
+
 		try {
 			cnt = Integer.parseInt(br.readLine());
 			inputNum = br.readLine();
-			
+
 			for (int i = 0; i < cnt; i++) {
 				sum += Integer.parseInt(inputNum.substring(i, i + 1));
 			}
-			
+
 			System.out.println(sum);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
-	
+
 }

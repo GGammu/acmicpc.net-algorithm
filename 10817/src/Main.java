@@ -4,16 +4,16 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 public class Main {
-	
+
 	public static void main(String[] args) {
-		/* 
-		 * ¼¼ Á¤¼ö A, B, C°¡ ÁÖ¾îÁø´Ù. ÀÌ¶§, µÎ ¹øÂ°·Î Å« Á¤¼ö¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ ¼¼ Á¤¼ö A, B, C°¡ °ø¹éÀ¸·Î ±¸ºĞµÇ¾î ÁÖ¾îÁø´Ù. (1 ¡Â A, B, C ¡Â 100)
-		 * µÎ ¹øÂ°·Î Å« Á¤¼ö¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		/*
+		 * ì„¸ ì •ìˆ˜ A, B, Cê°€ ì£¼ì–´ì§„ë‹¤. ì´ë•Œ, ë‘ ë²ˆì§¸ë¡œ í° ì •ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— ì„¸ ì •ìˆ˜ A, B, Cê°€ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„ë˜ì–´ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ A, B, C â‰¤ 100)
+		 * ë‘ ë²ˆì§¸ë¡œ í° ì •ìˆ˜ë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 20 30 10
-		 * 
-		 * 20 
+		 *
+		 * 20
 		 */
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -24,11 +24,11 @@ public class Main {
 		int rtn = 0;
 		try {
 			values = br.readLine().split(" ");
-		
+
 			tmp1 = Integer.parseInt(values[0]);
 			tmp2 = Integer.parseInt(values[1]);
 			tmp3 = Integer.parseInt(values[2]);
-			
+
 			if ((tmp1 <= tmp3 && tmp3 <= tmp2) || (tmp2 <= tmp3 && tmp3 <= tmp1)) {
 				rtn = tmp3;
 			} else if ((tmp1 <= tmp2 && tmp2 <= tmp3) || (tmp3 <= tmp2 && tmp2 <= tmp1)) {
@@ -36,12 +36,12 @@ public class Main {
 			} else {
 				rtn = tmp1;
 			}
-			
+
 			bw.write(String.valueOf(rtn));
 			bw.flush();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
-	
+
 }

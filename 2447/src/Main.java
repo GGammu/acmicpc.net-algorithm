@@ -6,36 +6,36 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		/* 
-		 * ¿¹Á¦¸¦ º¸°í ±ÔÄ¢À» À¯ÃßÇÑ µÚ¿¡ º°À» Âï¾î º¸¼¼¿ä.
-		 * Ã¹Â° ÁÙ¿¡ NÀÌ ÁÖ¾îÁø´Ù. NÀº Ç×»ó 3ÀÇ Á¦°ö²ÃÀÎ ¼öÀÌ´Ù. (3, 9, 27, ...) (N=3k, 1 ¡Â k < 8)
-		 * Ã¹Â° ÁÙºÎÅÍ N¹øÂ° ÁÙ±îÁö º°À» Ãâ·ÂÇÑ´Ù.
+		/*
+		 * ì˜ˆì œë¥¼ ë³´ê³  ê·œì¹™ì„ ìœ ì¶”í•œ ë’¤ì— ë³„ì„ ì°ì–´ ë³´ì„¸ìš”.
+		 * ì²«ì§¸ ì¤„ì— Nì´ ì£¼ì–´ì§„ë‹¤. Nì€ í•­ìƒ 3ì˜ ì œê³±ê¼´ì¸ ìˆ˜ì´ë‹¤. (3, 9, 27, ...) (N=3k, 1 â‰¤ k < 8)
+		 * ì²«ì§¸ ì¤„ë¶€í„° Në²ˆì§¸ ì¤„ê¹Œì§€ ë³„ì„ ì¶œë ¥í•œë‹¤.
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		int N = sc.nextInt();
 		char[][] list = new char[N][N];
-		
+
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				list[i][j] = ' ';
 			}
 		}
-		
+
 		draw(list, N, 0, 0);
-		
+
 		for (int i = 0; i < N; i++) {
 			bw.write(list[i]);
 			bw.newLine();
 		}
 		bw.flush();
 	}
-	
+
 	private static void draw(char[][] list, int n, int x, int y) {
 		int a = n / 3;
-		
+
 		if (a == 1) {
 			list[x][y] = '*';
 			list[x + 1][y] = '*';
@@ -56,5 +56,5 @@ public class Main {
 			draw(list, a, x + a * 2, y + a * 2);
 		}
 	}
-	
+
 }

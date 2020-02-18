@@ -8,39 +8,39 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		/*
-		 * N°³ÀÇ Á¤¼ö°¡ ÁÖ¾îÁø´Ù. ÀÌ¶§, ÃÖ¼Ú°ª°ú ÃÖ´ñ°ªÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ Á¤¼öÀÇ °³¼ö N (1 ¡Â N ¡Â 1,000,000)ÀÌ ÁÖ¾îÁø´Ù. µÑÂ° ÁÙ¿¡´Â N°³ÀÇ Á¤¼ö¸¦ °ø¹éÀ¸·Î ±¸ºĞÇØ¼­ ÁÖ¾îÁø´Ù. ¸ğµç Á¤¼ö´Â -1,000,000º¸´Ù Å©°Å³ª °°°í, 1,000,000º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
-		 * Ã¹Â° ÁÙ¿¡ ÁÖ¾îÁø Á¤¼ö N°³ÀÇ ÃÖ¼Ú°ª°ú ÃÖ´ñ°ªÀ» °ø¹éÀ¸·Î ±¸ºĞÇØ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * Nê°œì˜ ì •ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì´ë•Œ, ìµœì†Ÿê°’ê³¼ ìµœëŒ“ê°’ì„ êµ¬í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— ì •ìˆ˜ì˜ ê°œìˆ˜ N (1 â‰¤ N â‰¤ 1,000,000)ì´ ì£¼ì–´ì§„ë‹¤. ë‘˜ì§¸ ì¤„ì—ëŠ” Nê°œì˜ ì •ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ì„œ ì£¼ì–´ì§„ë‹¤. ëª¨ë“  ì •ìˆ˜ëŠ” -1,000,000ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 1,000,000ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
+		 * ì²«ì§¸ ì¤„ì— ì£¼ì–´ì§„ ì •ìˆ˜ Nê°œì˜ ìµœì†Ÿê°’ê³¼ ìµœëŒ“ê°’ì„ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„í•´ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 5
 		 * 20 10 35 30 7
-		 * 
+		 *
 		 * 7 35
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		int N = Integer.parseInt(br.readLine());
 		String[] nums = br.readLine().split(" ");
 		int tmp;
 		int min = 1000000;
 		int max = -1000000;
-		
+
 		for (int i = 0; i < N; i++) {
 			tmp = Integer.parseInt(nums[i]);
 			if (tmp < min) {
 				min = tmp;
 			}
-			
+
 			if (max < tmp) {
 				max = tmp;
 			}
 		}
-		
+
 		bw.write(String.valueOf(min) + " " + String.valueOf(max));
 		bw.flush();
 	}
-	
+
 
 }

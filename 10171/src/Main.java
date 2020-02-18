@@ -3,8 +3,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * ¾Æ·¡ ¿¹Á¦¿Í °°ÀÌ °í¾çÀÌ¸¦ Ãâ·ÂÇÏ½Ã¿À.
-		 * 
+		 * ì•„ë˜ ì˜ˆì œì™€ ê°™ì´ ê³ ì–‘ì´ë¥¼ ì¶œë ¥í•˜ì‹œì˜¤.
+		 *
 		 * \    /\
          *  )  ( ')
 		 * (  /  )
@@ -15,5 +15,5 @@ public class Main {
 		System.out.println("(  /  )");
 		System.out.println(" \\(__)|");
 	}
-	
+
 }

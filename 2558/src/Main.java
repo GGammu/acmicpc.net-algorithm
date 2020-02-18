@@ -7,25 +7,25 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ A, µÑÂ° ÁÙ¿¡ B°¡ ÁÖ¾îÁø´Ù. (0 < A, B < 10)
-		 * Ã¹Â° ÁÙ¿¡ A+B¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— A, ë‘˜ì§¸ ì¤„ì— Bê°€ ì£¼ì–´ì§„ë‹¤. (0 < A, B < 10)
+		 * ì²«ì§¸ ì¤„ì— A+Bë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 1
 		 * 2
-		 * 
+		 *
 		 * 3
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+
 		try {
 			int a = Integer.parseInt(br.readLine());
 			int b = Integer.parseInt(br.readLine());
-			
+
 			System.out.println(a + b);
 		} catch (Exception e) {
 		}
 	}
-	
+
 }

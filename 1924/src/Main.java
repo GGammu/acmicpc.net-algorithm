@@ -1,24 +1,24 @@
 import java.util.Scanner;
 
 public class Main {
-	
+
 	public static void main(String[] args) {
 		/*
-		 * ¿À´ÃÀº 2007³â 1¿ù 1ÀÏ ¿ù¿äÀÏÀÌ´Ù. ±×·¸´Ù¸é 2007³â x¿ù yÀÏÀº ¹«½¼ ¿äÀÏÀÏ±î? ÀÌ¸¦ ¾Ë¾Æ³»´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ ºó Ä­À» »çÀÌ¿¡ µÎ°í x(1¡Âx¡Â12)¿Í y(1¡Ây¡Â31)ÀÌ ÁÖ¾îÁø´Ù. Âü°í·Î 2007³â¿¡´Â 1, 3, 5, 7, 8, 10, 12¿ùÀº 31ÀÏ±îÁö, 4, 6, 9, 11¿ùÀº 30ÀÏ±îÁö, 2¿ùÀº 28ÀÏ±îÁö ÀÖ´Ù.
-		 * Ã¹Â° ÁÙ¿¡ x¿ù yÀÏÀÌ ¹«½¼ ¿äÀÏÀÎÁö¿¡ µû¶ó SUN, MON, TUE, WED, THU, FRI, SATÁß ÇÏ³ª¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ì˜¤ëŠ˜ì€ 2007ë…„ 1ì›” 1ì¼ ì›”ìš”ì¼ì´ë‹¤. ê·¸ë ‡ë‹¤ë©´ 2007ë…„ xì›” yì¼ì€ ë¬´ìŠ¨ ìš”ì¼ì¼ê¹Œ? ì´ë¥¼ ì•Œì•„ë‚´ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— ë¹ˆ ì¹¸ì„ ì‚¬ì´ì— ë‘ê³  x(1â‰¤xâ‰¤12)ì™€ y(1â‰¤yâ‰¤31)ì´ ì£¼ì–´ì§„ë‹¤. ì°¸ê³ ë¡œ 2007ë…„ì—ëŠ” 1, 3, 5, 7, 8, 10, 12ì›”ì€ 31ì¼ê¹Œì§€, 4, 6, 9, 11ì›”ì€ 30ì¼ê¹Œì§€, 2ì›”ì€ 28ì¼ê¹Œì§€ ìžˆë‹¤.
+		 * ì²«ì§¸ ì¤„ì— xì›” yì¼ì´ ë¬´ìŠ¨ ìš”ì¼ì¸ì§€ì— ë”°ë¼ SUN, MON, TUE, WED, THU, FRI, SATì¤‘ í•˜ë‚˜ë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 1 1
-		 * 
+		 *
 		 * MON
 		 */
 		Scanner sc = new Scanner(System.in);
 		int countDays = 0;
 		int days = 0;
 		String weekly;
-		
+
 		String[] values = sc.nextLine().split(" ");
-		
+
 		for (int i = 1; i < Integer.parseInt(values[0]); i++) {
 			if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
 				countDays += 31;
@@ -28,12 +28,12 @@ public class Main {
 				countDays += 28;
 			}
 		}
-		
-		
+
+
 		countDays += Integer.parseInt(values[1]);
-		
+
 		days = countDays % 7;
-		
+
 		switch (days) {
 			case 0:
 				weekly = "SUN";
@@ -60,8 +60,8 @@ public class Main {
 				weekly = "";
 				break;
 		}
-		
+
 		System.out.println(weekly);
 	}
-	
+
 }

@@ -1,2 +1,5 @@
 .metadata/
 *.class
+.settings/
+.DS_Store
+.sonarlint/

@@ -6,16 +6,16 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		 * ¼¿ÇÁ ³Ñ¹ö´Â 1949³â ÀÎµµ ¼öÇÐÀÚ D.R. Kaprekar°¡ ÀÌ¸§ ºÙ¿´´Ù. ¾çÀÇ Á¤¼ö n¿¡ ´ëÇØ¼­ d(n)À» n°ú nÀÇ °¢ ÀÚ¸®¼ö¸¦ ´õÇÏ´Â ÇÔ¼ö¶ó°í Á¤ÀÇÇÏÀÚ. ¿¹¸¦ µé¾î, d(75) = 75+7+5 = 87ÀÌ´Ù.
-		 * ¾çÀÇ Á¤¼ö nÀÌ ÁÖ¾îÁ³À» ¶§, ÀÌ ¼ö¸¦ ½ÃÀÛÇØ¼­ n, d(n), d(d(n)), d(d(d(n))), ...°ú °°Àº ¹«ÇÑ ¼ö¿­À» ¸¸µé ¼ö ÀÖ´Ù. 
-		 * ¿¹¸¦ µé¾î, 33À¸·Î ½ÃÀÛÇÑ´Ù¸é ´ÙÀ½ ¼ö´Â 33 + 3 + 3 = 39ÀÌ°í, ±× ´ÙÀ½ ¼ö´Â 39 + 3 + 9 = 51, ´ÙÀ½ ¼ö´Â 51 + 5 + 1 = 57ÀÌ´Ù. ÀÌ·±½ÄÀ¸·Î ´ÙÀ½°ú °°Àº ¼ö¿­À» ¸¸µé ¼ö ÀÖ´Ù.
+		 * ì…€í”„ ë„˜ë²„ëŠ” 1949ë…„ ì¸ë„ ìˆ˜í•™ìž D.R. Kaprekarê°€ ì´ë¦„ ë¶™ì˜€ë‹¤. ì–‘ì˜ ì •ìˆ˜ nì— ëŒ€í•´ì„œ d(n)ì„ nê³¼ nì˜ ê° ìžë¦¬ìˆ˜ë¥¼ ë”í•˜ëŠ” í•¨ìˆ˜ë¼ê³  ì •ì˜í•˜ìž. ì˜ˆë¥¼ ë“¤ì–´, d(75) = 75+7+5 = 87ì´ë‹¤.
+		 * ì–‘ì˜ ì •ìˆ˜ nì´ ì£¼ì–´ì¡Œì„ ë•Œ, ì´ ìˆ˜ë¥¼ ì‹œìž‘í•´ì„œ n, d(n), d(d(n)), d(d(d(n))), ...ê³¼ ê°™ì€ ë¬´í•œ ìˆ˜ì—´ì„ ë§Œë“¤ ìˆ˜ ìžˆë‹¤.
+		 * ì˜ˆë¥¼ ë“¤ì–´, 33ìœ¼ë¡œ ì‹œìž‘í•œë‹¤ë©´ ë‹¤ìŒ ìˆ˜ëŠ” 33 + 3 + 3 = 39ì´ê³ , ê·¸ ë‹¤ìŒ ìˆ˜ëŠ” 39 + 3 + 9 = 51, ë‹¤ìŒ ìˆ˜ëŠ” 51 + 5 + 1 = 57ì´ë‹¤. ì´ëŸ°ì‹ìœ¼ë¡œ ë‹¤ìŒê³¼ ê°™ì€ ìˆ˜ì—´ì„ ë§Œë“¤ ìˆ˜ ìžˆë‹¤.
 		 * 33, 39, 51, 57, 69, 84, 96, 111, 114, 120, 123, 129, 141, ...
-		 * nÀ» d(n)ÀÇ »ý¼ºÀÚ¶ó°í ÇÑ´Ù. À§ÀÇ ¼ö¿­¿¡¼­ 33Àº 39ÀÇ »ý¼ºÀÚÀÌ°í, 39´Â 51ÀÇ »ý¼ºÀÚ, 51Àº 57ÀÇ »ý¼ºÀÚÀÌ´Ù. »ý¼ºÀÚ°¡ ÇÑ °³º¸´Ù ¸¹Àº °æ¿ìµµ ÀÖ´Ù. ¿¹¸¦ µé¾î, 101Àº »ý¼ºÀÚ°¡ 2°³(91°ú 100) ÀÖ´Ù. 
-		 * »ý¼ºÀÚ°¡ ¾ø´Â ¼ýÀÚ¸¦ ¼¿ÇÁ ³Ñ¹ö¶ó°í ÇÑ´Ù. 100º¸´Ù ÀÛÀº ¼¿ÇÁ ³Ñ¹ö´Â ÃÑ 13°³°¡ ÀÖ´Ù. 1, 3, 5, 7, 9, 20, 31, 42, 53, 64, 75, 86, 97
-		 * 10000º¸´Ù ÀÛ°Å³ª °°Àº ¼¿ÇÁ ³Ñ¹ö¸¦ ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * ÀÔ·ÂÀº ¾ø´Ù.
-		 * 10,000º¸´Ù ÀÛ°Å³ª °°Àº ¼¿ÇÁ ³Ñ¹ö¸¦ ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ Áõ°¡ÇÏ´Â ¼ø¼­·Î Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * nì„ d(n)ì˜ ìƒì„±ìžë¼ê³  í•œë‹¤. ìœ„ì˜ ìˆ˜ì—´ì—ì„œ 33ì€ 39ì˜ ìƒì„±ìžì´ê³ , 39ëŠ” 51ì˜ ìƒì„±ìž, 51ì€ 57ì˜ ìƒì„±ìžì´ë‹¤. ìƒì„±ìžê°€ í•œ ê°œë³´ë‹¤ ë§Žì€ ê²½ìš°ë„ ìžˆë‹¤. ì˜ˆë¥¼ ë“¤ì–´, 101ì€ ìƒì„±ìžê°€ 2ê°œ(91ê³¼ 100) ìžˆë‹¤.
+		 * ìƒì„±ìžê°€ ì—†ëŠ” ìˆ«ìžë¥¼ ì…€í”„ ë„˜ë²„ë¼ê³  í•œë‹¤. 100ë³´ë‹¤ ìž‘ì€ ì…€í”„ ë„˜ë²„ëŠ” ì´ 13ê°œê°€ ìžˆë‹¤. 1, 3, 5, 7, 9, 20, 31, 42, 53, 64, 75, 86, 97
+		 * 10000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì…€í”„ ë„˜ë²„ë¥¼ í•œ ì¤„ì— í•˜ë‚˜ì”© ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ìž…ë ¥ì€ ì—†ë‹¤.
+		 * 10,000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì…€í”„ ë„˜ë²„ë¥¼ í•œ ì¤„ì— í•˜ë‚˜ì”© ì¦ê°€í•˜ëŠ” ìˆœì„œë¡œ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 1
 		 * 3
 		 * 5
@@ -40,37 +40,37 @@ public class Main {
 		 * 9982
 		 * 9993
 		 */
-		
+
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		ArrayList<Integer> list = new ArrayList<Integer>();
-		
+
 		for (int i = 1; i <= 10000; i++) {
 			list.add(d(i));
 		}
-		
+
 		for (int i = 1; i < 10000; i++) {
 			if (list.contains(i))
 				continue;
-			
+
 			bw.write(String.valueOf(i));
 			bw.newLine();
 		}
 		bw.flush();
 	}
-	
+
 	private static int d(int n) {
 		int rtn = 0;
 		String strN = "";
-		
+
 		strN = String.valueOf(n);
-		
+
 		for (int i = 0; i < strN.length(); i++) {
 			rtn += Integer.parseInt(strN.substring(i, i + 1));
 		}
-		
+
 		rtn += n;
-		
-		return rtn;	
+
+		return rtn;
 	}
 }

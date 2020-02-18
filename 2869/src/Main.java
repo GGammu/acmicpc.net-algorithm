@@ -8,29 +8,29 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		/*
-		 * ¶¥ À§¿¡ ´ÞÆØÀÌ°¡ ÀÖ´Ù. ÀÌ ´ÞÆØÀÌ´Â ³ôÀÌ°¡ V¹ÌÅÍÀÎ ³ª¹« ¸·´ë¸¦ ¿Ã¶ó°¥ °ÍÀÌ´Ù.
-		 * ´ÞÆØÀÌ´Â ³·¿¡ A¹ÌÅÍ ¿Ã¶ó°¥ ¼ö ÀÖ´Ù. ÇÏÁö¸¸, ¹ã¿¡ ÀáÀ» ÀÚ´Â µ¿¾È B¹ÌÅÍ ¹Ì²ô·¯Áø´Ù. ¶Ç, Á¤»ó¿¡ ¿Ã¶ó°£ ÈÄ¿¡´Â ¹Ì²ô·¯ÁöÁö ¾Ê´Â´Ù.
-		 * ´ÞÆØÀÌ°¡ ³ª¹« ¸·´ë¸¦ ¸ðµÎ ¿Ã¶ó°¡·Á¸é, ¸çÄ¥ÀÌ °É¸®´ÂÁö ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ ¼¼ Á¤¼ö A, B, V°¡ °ø¹éÀ¸·Î ±¸ºÐµÇ¾î¼­ ÁÖ¾îÁø´Ù. (1 ¡Â B < A ¡Â V ¡Â 1,000,000,000)
-		 * Ã¹Â° ÁÙ¿¡ ´ÞÆØÀÌ°¡ ³ª¹« ¸·´ë¸¦ ¸ðµÎ ¿Ã¶ó°¡´Âµ¥ ¸çÄ¥ÀÌ °É¸®´ÂÁö Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ë•… ìœ„ì— ë‹¬íŒ½ì´ê°€ ìžˆë‹¤. ì´ ë‹¬íŒ½ì´ëŠ” ë†’ì´ê°€ Vë¯¸í„°ì¸ ë‚˜ë¬´ ë§‰ëŒ€ë¥¼ ì˜¬ë¼ê°ˆ ê²ƒì´ë‹¤.
+		 * ë‹¬íŒ½ì´ëŠ” ë‚®ì— Aë¯¸í„° ì˜¬ë¼ê°ˆ ìˆ˜ ìžˆë‹¤. í•˜ì§€ë§Œ, ë°¤ì— ìž ì„ ìžëŠ” ë™ì•ˆ Bë¯¸í„° ë¯¸ë„ëŸ¬ì§„ë‹¤. ë˜, ì •ìƒì— ì˜¬ë¼ê°„ í›„ì—ëŠ” ë¯¸ë„ëŸ¬ì§€ì§€ ì•ŠëŠ”ë‹¤.
+		 * ë‹¬íŒ½ì´ê°€ ë‚˜ë¬´ ë§‰ëŒ€ë¥¼ ëª¨ë‘ ì˜¬ë¼ê°€ë ¤ë©´, ë©°ì¹ ì´ ê±¸ë¦¬ëŠ”ì§€ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— ì„¸ ì •ìˆ˜ A, B, Vê°€ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„ë˜ì–´ì„œ ì£¼ì–´ì§„ë‹¤. (1 â‰¤ B < A â‰¤ V â‰¤ 1,000,000,000)
+		 * ì²«ì§¸ ì¤„ì— ë‹¬íŒ½ì´ê°€ ë‚˜ë¬´ ë§‰ëŒ€ë¥¼ ëª¨ë‘ ì˜¬ë¼ê°€ëŠ”ë° ë©°ì¹ ì´ ê±¸ë¦¬ëŠ”ì§€ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 2 1 5
-		 * 
+		 *
 		 * 4
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		String[] value = br.readLine().split(" ");
 		long A = Long.parseLong(value[0]);
 		long B = Long.parseLong(value[1]);
 		long V = Long.parseLong(value[2]);
-		
+
 		int days = 0;
-		
+
 		bw.write(String.valueOf((long)Math.ceil((double)(V - B) / (double)(A - B))));
-		
+
 		bw.flush();
 	}
 }

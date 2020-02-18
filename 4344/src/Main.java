@@ -9,18 +9,18 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		 * ´ëÇĞ»ı »õ³»±âµéÀÇ 90%´Â ÀÚ½ÅÀÌ ¹İ¿¡¼­ Æò±ÕÀº ³Ñ´Â´Ù°í »ı°¢ÇÑ´Ù. ´ç½ÅÀº ±×µé¿¡°Ô ½½ÇÂ Áø½ÇÀ» ¾Ë·ÁÁà¾ß ÇÑ´Ù.
-		 * Ã¹Â° ÁÙ¿¡´Â Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö C°¡ ÁÖ¾îÁø´Ù.
-		 * µÑÂ° ÁÙºÎÅÍ °¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù ÇĞ»ıÀÇ ¼ö N(1 ¡Â N ¡Â 1000, NÀº Á¤¼ö)ÀÌ Ã¹ ¼ö·Î ÁÖ¾îÁö°í, ÀÌ¾î¼­ N¸íÀÇ Á¡¼ö°¡ ÁÖ¾îÁø´Ù. Á¡¼ö´Â 0º¸´Ù Å©°Å³ª °°°í, 100º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ´Ù.
-		 * °¢ ÄÉÀÌ½º¸¶´Ù ÇÑ ÁÙ¾¿ Æò±ÕÀ» ³Ñ´Â ÇĞ»ıµéÀÇ ºñÀ²À» ¹İ¿Ã¸²ÇÏ¿© ¼Ò¼öÁ¡ ¼ÂÂ° ÀÚ¸®±îÁö Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ëŒ€í•™ìƒ ìƒˆë‚´ê¸°ë“¤ì˜ 90%ëŠ” ìì‹ ì´ ë°˜ì—ì„œ í‰ê· ì€ ë„˜ëŠ”ë‹¤ê³  ìƒê°í•œë‹¤. ë‹¹ì‹ ì€ ê·¸ë“¤ì—ê²Œ ìŠ¬í”ˆ ì§„ì‹¤ì„ ì•Œë ¤ì¤˜ì•¼ í•œë‹¤.
+		 * ì²«ì§¸ ì¤„ì—ëŠ” í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜ Cê°€ ì£¼ì–´ì§„ë‹¤.
+		 * ë‘˜ì§¸ ì¤„ë¶€í„° ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë§ˆë‹¤ í•™ìƒì˜ ìˆ˜ N(1 â‰¤ N â‰¤ 1000, Nì€ ì •ìˆ˜)ì´ ì²« ìˆ˜ë¡œ ì£¼ì–´ì§€ê³ , ì´ì–´ì„œ Nëª…ì˜ ì ìˆ˜ê°€ ì£¼ì–´ì§„ë‹¤. ì ìˆ˜ëŠ” 0ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 100ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ë‹¤.
+		 * ê° ì¼€ì´ìŠ¤ë§ˆë‹¤ í•œ ì¤„ì”© í‰ê· ì„ ë„˜ëŠ” í•™ìƒë“¤ì˜ ë¹„ìœ¨ì„ ë°˜ì˜¬ë¦¼í•˜ì—¬ ì†Œìˆ˜ì  ì…‹ì§¸ ìë¦¬ê¹Œì§€ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 5
 		 * 5 50 50 70 80 100
 		 * 7 100 95 90 80 70 60 50
 		 * 3 70 90 80
 		 * 3 70 90 81
 		 * 9 100 99 98 97 96 95 94 93 91
-		 * 
+		 *
 		 * 40.000%
 		 * 57.143%
 		 * 33.333%
@@ -29,13 +29,13 @@ public class Main {
 		 */
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		int cnt = 0;
 		ArrayList<String> al = new ArrayList<String>();
 		ArrayList<Double> scores = new ArrayList<Double>();
-		
+
 		String[] tmpScore = null;
-		
+
 		Double studenstsCnt = 0.0D;
 		Double sum = 0.0D;
 		Double avg = 0.0D;
@@ -43,16 +43,16 @@ public class Main {
 		Double goodAvg = 0.0D;
 		Double pi = Math.pow(10, 3);
 		DecimalFormat df = new DecimalFormat("0.000");
-		
+
 		cnt = Integer.parseInt(br.readLine());
-		
+
 		for (int i = 0; i < cnt; i++) {
 			al.add(br.readLine());
 		}
-		
+
 		for (int i = 0; i < cnt; i++) {
 			tmpScore = al.get(i).split(" ");
-			
+
 			studenstsCnt = Double.parseDouble(tmpScore[0]);
 			sum = 0.0D;
 			scores.clear();
@@ -60,19 +60,19 @@ public class Main {
 				scores.add(Double.parseDouble(tmpScore[j]));
 				sum +=  Double.parseDouble(tmpScore[j]);
 			}
-			
+
 			avg = Math.round(sum / studenstsCnt * pi) / pi;
 			goodCnt = 0.0D;
 			goodAvg = 0.0D;
 			for (int j = 0; j < studenstsCnt; j++) {
 				if (scores.get(j) > avg) goodCnt++;
 			}
-			
+
 			goodAvg = Math.round(goodCnt / studenstsCnt * 100 * pi) / pi;
 			if (i != 0) bw.newLine();
 			bw.write(df.format(goodAvg) + "%");
 		}
 		bw.flush();
 	}
-	
+
 }

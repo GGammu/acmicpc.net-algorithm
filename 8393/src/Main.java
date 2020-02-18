@@ -4,24 +4,24 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * nÀÌ ÁÖ¾îÁ³À» ¶§, 1ºÎÅÍ n±îÁö ÇÕÀ» ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ n (1 ¡Â n ¡Â 10,000)ÀÌ ÁÖ¾îÁø´Ù.
-		 * 1ºÎÅÍ n±îÁö ÇÕÀ» Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * nì´ ì£¼ì–´ì¡Œì„ ë•Œ, 1ë¶€í„° nê¹Œì§€ í•©ì„ êµ¬í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— n (1 â‰¤ n â‰¤ 10,000)ì´ ì£¼ì–´ì§„ë‹¤.
+		 * 1ë¶€í„° nê¹Œì§€ í•©ì„ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 3
-		 * 
+		 *
 		 * 6
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
 		int value = Integer.parseInt(sc.nextLine());
 		int sum = 0;
-		
+
 		for (int i = value; i > 0; i--) {
 			sum += i;
 		}
-		
+
 		System.out.println(sum);
 	}
-	
+
 }

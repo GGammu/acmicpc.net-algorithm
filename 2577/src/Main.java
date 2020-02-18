@@ -7,17 +7,17 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		/*
-		 * ¼¼ °³ÀÇ ÀÚ¿¬¼ö A, B, C°¡ ÁÖ¾îÁú ¶§ A¡¿B¡¿C¸¦ °è»êÇÑ °á°ú¿¡ 0ºÎÅÍ 9±îÁö °¢°¢ÀÇ ¼ıÀÚ°¡ ¸î ¹ø¾¿ ¾²¿´´ÂÁö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * ¿¹¸¦ µé¾î A = 150, B = 266, C = 427 ÀÌ¶ó¸é 
-		 * A ¡¿ B ¡¿ C = 150 ¡¿ 266 ¡¿ 427 = 17037300 ÀÌ µÇ°í, 
-		 * °è»êÇÑ °á°ú 17037300 ¿¡´Â 0ÀÌ 3¹ø, 1ÀÌ 1¹ø, 3ÀÌ 2¹ø, 7ÀÌ 2¹ø ¾²¿´´Ù.
-		 * Ã¹Â° ÁÙ¿¡ A, µÑÂ° ÁÙ¿¡ B, ¼ÂÂ° ÁÙ¿¡ C°¡ ÁÖ¾îÁø´Ù. A, B, C´Â ¸ğµÎ 100º¸´Ù °°°Å³ª Å©°í, 1,000º¸´Ù ÀÛÀº ÀÚ¿¬¼öÀÌ´Ù.
-		 * Ã¹Â° ÁÙ¿¡´Â A¡¿B¡¿CÀÇ °á°ú¿¡ 0 ÀÌ ¸î ¹ø ¾²¿´´ÂÁö Ãâ·ÂÇÑ´Ù. ¸¶Âù°¡Áö·Î µÑÂ° ÁÙºÎÅÍ ¿­ ¹øÂ° ÁÙ±îÁö A¡¿B¡¿CÀÇ °á°ú¿¡ 1ºÎÅÍ 9±îÁöÀÇ ¼ıÀÚ°¡ °¢°¢ ¸î ¹ø ¾²¿´´ÂÁö Â÷·Ê·Î ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ì„¸ ê°œì˜ ìì—°ìˆ˜ A, B, Cê°€ ì£¼ì–´ì§ˆ ë•Œ AÃ—BÃ—Cë¥¼ ê³„ì‚°í•œ ê²°ê³¼ì— 0ë¶€í„° 9ê¹Œì§€ ê°ê°ì˜ ìˆ«ìê°€ ëª‡ ë²ˆì”© ì“°ì˜€ëŠ”ì§€ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì˜ˆë¥¼ ë“¤ì–´ A = 150, B = 266, C = 427 ì´ë¼ë©´
+		 * A Ã— B Ã— C = 150 Ã— 266 Ã— 427 = 17037300 ì´ ë˜ê³ ,
+		 * ê³„ì‚°í•œ ê²°ê³¼ 17037300 ì—ëŠ” 0ì´ 3ë²ˆ, 1ì´ 1ë²ˆ, 3ì´ 2ë²ˆ, 7ì´ 2ë²ˆ ì“°ì˜€ë‹¤.
+		 * ì²«ì§¸ ì¤„ì— A, ë‘˜ì§¸ ì¤„ì— B, ì…‹ì§¸ ì¤„ì— Cê°€ ì£¼ì–´ì§„ë‹¤. A, B, CëŠ” ëª¨ë‘ 100ë³´ë‹¤ ê°™ê±°ë‚˜ í¬ê³ , 1,000ë³´ë‹¤ ì‘ì€ ìì—°ìˆ˜ì´ë‹¤.
+		 * ì²«ì§¸ ì¤„ì—ëŠ” AÃ—BÃ—Cì˜ ê²°ê³¼ì— 0 ì´ ëª‡ ë²ˆ ì“°ì˜€ëŠ”ì§€ ì¶œë ¥í•œë‹¤. ë§ˆì°¬ê°€ì§€ë¡œ ë‘˜ì§¸ ì¤„ë¶€í„° ì—´ ë²ˆì§¸ ì¤„ê¹Œì§€ AÃ—BÃ—Cì˜ ê²°ê³¼ì— 1ë¶€í„° 9ê¹Œì§€ì˜ ìˆ«ìê°€ ê°ê° ëª‡ ë²ˆ ì“°ì˜€ëŠ”ì§€ ì°¨ë¡€ë¡œ í•œ ì¤„ì— í•˜ë‚˜ì”© ì¶œë ¥í•œë‹¤.
+		 *
 		 * 150
 		 * 266
 		 * 427
-		 * 
+		 *
 		 * 3
 		 * 1
 		 * 0
@@ -29,31 +29,31 @@ public class Main {
 		 * 0
 		 * 0
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		int A = Integer.parseInt(br.readLine());
 		int B = Integer.parseInt(br.readLine());
 		int C = Integer.parseInt(br.readLine());
 		int value = A * B * C;
 		int[] numbers = new int[10];
-		
+
 		for (int i = 0; i < numbers.length; i++) {
 			numbers[i] = 0;
 		}
-		
+
 		String[] valueArray = String.valueOf(value).split("");
-		
+
 		for (int i = 0; i < valueArray.length; i++) {
-			numbers[Integer.parseInt(valueArray[i])]++; 
+			numbers[Integer.parseInt(valueArray[i])]++;
 		}
-		
+
 		for (int i = 0; i < numbers.length; i++) {
 			bw.write(String.valueOf(numbers[i]));
 			bw.newLine();
 		}
 		bw.flush();
 	}
-	
+
 }

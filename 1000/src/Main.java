@@ -4,15 +4,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ A¿Í B°¡ ÁÖ¾îÁø´Ù. (0 < A, B < 10)
-		 * Ã¹Â° ÁÙ¿¡ A+B¸¦ Ãâ·ÂÇÑ´Ù.
-		 *  
+		 * ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. (0 < A, B < 10)
+		 * ì²«ì§¸ ì¤„ì— A+Bë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 1 2
-		 *  
-		 * 3 
+		 *
+		 * 3
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
 		String[] numbers = sc.nextLine().split(" ");
 		System.out.println(Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]));

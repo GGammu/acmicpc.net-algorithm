@@ -8,11 +8,11 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		/*
-		 * µÎ ÀÚ¿¬¼ö A¿Í B°¡ ÀÖÀ» ¶§, A%B´Â A¸¦ B·Î ³ª´« ³ª¸ÓÁö ÀÌ´Ù. ¿¹¸¦ µé¾î, 7, 14, 27, 38À» 3À¸·Î ³ª´« ³ª¸ÓÁö´Â 1, 2, 0, 2ÀÌ´Ù. 
-		 * ¼ö 10°³¸¦ ÀÔ·Â¹ÞÀº µÚ, ÀÌ¸¦ 42·Î ³ª´« ³ª¸ÓÁö¸¦ ±¸ÇÑ´Ù. ±× ´ÙÀ½ ¼­·Î ´Ù¸¥ °ªÀÌ ¸î °³ ÀÖ´ÂÁö Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙºÎÅÍ ¿­¹øÂ° ÁÙ ±îÁö ¼ýÀÚ°¡ ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ ÁÖ¾îÁø´Ù. ÀÌ ¼ýÀÚ´Â 1,000º¸´Ù ÀÛ°Å³ª °°°í, À½ÀÌ ¾Æ´Ñ Á¤¼öÀÌ´Ù.
-		 * Ã¹Â° ÁÙ¿¡, 42·Î ³ª´©¾úÀ» ¶§, ¼­·Î ´Ù¸¥ ³ª¸ÓÁö°¡ ¸î °³ ÀÖ´ÂÁö Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ë‘ ìžì—°ìˆ˜ Aì™€ Bê°€ ìžˆì„ ë•Œ, A%BëŠ” Aë¥¼ Bë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ ì´ë‹¤. ì˜ˆë¥¼ ë“¤ì–´, 7, 14, 27, 38ì„ 3ìœ¼ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ëŠ” 1, 2, 0, 2ì´ë‹¤.
+		 * ìˆ˜ 10ê°œë¥¼ ìž…ë ¥ë°›ì€ ë’¤, ì´ë¥¼ 42ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ë¥¼ êµ¬í•œë‹¤. ê·¸ ë‹¤ìŒ ì„œë¡œ ë‹¤ë¥¸ ê°’ì´ ëª‡ ê°œ ìžˆëŠ”ì§€ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ë¶€í„° ì—´ë²ˆì§¸ ì¤„ ê¹Œì§€ ìˆ«ìžê°€ í•œ ì¤„ì— í•˜ë‚˜ì”© ì£¼ì–´ì§„ë‹¤. ì´ ìˆ«ìžëŠ” 1,000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ê³ , ìŒì´ ì•„ë‹Œ ì •ìˆ˜ì´ë‹¤.
+		 * ì²«ì§¸ ì¤„ì—, 42ë¡œ ë‚˜ëˆ„ì—ˆì„ ë•Œ, ì„œë¡œ ë‹¤ë¥¸ ë‚˜ë¨¸ì§€ê°€ ëª‡ ê°œ ìžˆëŠ”ì§€ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 39
 		 * 40
 		 * 41
@@ -23,21 +23,21 @@ public class Main {
 		 * 83
 		 * 84
 		 * 85
-		 * 
+		 *
 		 * 6
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		int[] nums = new int[10];
 		int cnt = 0;
 		boolean exist = false;
-		
+
 		for (int i = 0; i < 10; i++) {
 			nums[i] = Integer.parseInt(br.readLine()) % 42;
 		}
-		
+
 		for (int i = 0; i < nums.length; i++) {
 			exist = false;
 			for (int j = 0; j < i; j++) {
@@ -46,14 +46,14 @@ public class Main {
 					break;
 				}
 			}
-			
+
 			if(!exist) {
 				cnt++;
 			}
 		}
-		
+
 		bw.write(String.valueOf(cnt));
 		bw.flush();
 	}
-	
+
 }

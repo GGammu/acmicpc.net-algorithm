@@ -8,38 +8,38 @@ public class Main {
 
 	public static void main(String[] args) throws IOException{
 		/*
-		 * µÎ Á¤¼ö A¿Í B¸¦ ÀÔ·Â¹ŞÀº ´ÙÀ½, A+B¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * ÀÔ·ÂÀº ¿©·¯ °³ÀÇ Å×½ºÆ® ÄÉÀÌ½º·Î ÀÌ·ç¾îÁ® ÀÖ´Ù.
-		 * °¢ Å×½ºÆ® ÄÉÀÌ½º´Â ÇÑ ÁÙ·Î ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, °¢ ÁÙ¿¡ A¿Í B°¡ ÁÖ¾îÁø´Ù. (0 < A, B < 10)
-		 * ÀÔ·ÂÀÇ ¸¶Áö¸·¿¡´Â 0 µÎ °³°¡ µé¾î¿Â´Ù.
-		 * °¢ Å×½ºÆ® ÄÉÀÌ½º¸¶´Ù A+B¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ì…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì…ë ¥ì€ ì—¬ëŸ¬ ê°œì˜ í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë¡œ ì´ë£¨ì–´ì ¸ ìˆë‹¤.
+		 * ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ëŠ” í•œ ì¤„ë¡œ ì´ë£¨ì–´ì ¸ ìˆìœ¼ë©°, ê° ì¤„ì— Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. (0 < A, B < 10)
+		 * ì…ë ¥ì˜ ë§ˆì§€ë§‰ì—ëŠ” 0 ë‘ ê°œê°€ ë“¤ì–´ì˜¨ë‹¤.
+		 * ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë§ˆë‹¤ A+Bë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 1 1
 		 * 2 3
 		 * 3 4
 		 * 9 8
 		 * 5 2
 		 * 0 0
-		 * 
+		 *
 		 * 2
 		 * 5
 		 * 7
 		 * 17
 		 * 7
 		 */
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		String temp = "";
 		String[] nums = new String[2];
-		
+
 		while(!(temp =br.readLine()).equals("0 0")) {
 			nums = temp.split(" ");
 			bw.write(String.valueOf(Integer.parseInt(nums[0]) + Integer.parseInt(nums[1])));
 			bw.newLine();
 		}
-		
+
 		bw.flush();
 	}
-	
+
 }

@@ -4,20 +4,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * 0º¸´Ù Å©°Å³ª °°Àº Á¤¼ö NÀÌ ÁÖ¾îÁø´Ù. ÀÌ¶§, N!À» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ Á¤¼ö N(0 ¡Â N ¡Â 12)°¡ ÁÖ¾îÁø´Ù.
-		 * Ã¹Â° ÁÙ¿¡ N!À» Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * 0ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ Nì´ ì£¼ì–´ì§„ë‹¤. ì´ë•Œ, N!ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— ì •ìˆ˜ N(0 â‰¤ N â‰¤ 12)ê°€ ì£¼ì–´ì§„ë‹¤.
+		 * ì²«ì§¸ ì¤„ì— N!ì„ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 10
-		 * 
+		 *
 		 * 3628800
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
-		
+
 		int N = sc.nextInt();
 		long value = 0;
-		
+
 		value = factorial(N);
 		System.out.print(value);
 	}
@@ -29,5 +29,5 @@ public class Main {
 			return n * factorial(n - 1);
 		}
 	}
-	
+
 }

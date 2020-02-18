@@ -9,16 +9,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * Ã¹ ÁÙ¿¡ Å×½ºÆ®ÄÉÀÌ½ºÀÇ °³¼ö T°¡ ÁÖ¾îÁø´Ù. T´Â ÃÖ´ë 1,000,000ÀÌ´Ù. ´ÙÀ½ TÁÙ¿¡´Â °¢°¢ µÎ Á¤¼ö A¿Í B°¡ ÁÖ¾îÁø´Ù. A¿Í B´Â 1 ÀÌ»ó, 1,000 ÀÌÇÏÀÌ´Ù.
-		 * °¢ Å×½ºÆ®ÄÉÀÌ½º¸¶´Ù A+B¸¦ ÇÑ ÁÙ¿¡ ÇÏ³ª¾¿ ¼ø¼­´ë·Î Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ì²« ì¤„ì— í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜ Tê°€ ì£¼ì–´ì§„ë‹¤. TëŠ” ìµœëŒ€ 1,000,000ì´ë‹¤. ë‹¤ìŒ Tì¤„ì—ëŠ” ê°ê° ë‘ ì •ìˆ˜ Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. Aì™€ BëŠ” 1 ì´ìƒ, 1,000 ì´í•˜ì´ë‹¤.
+		 * ê° í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤ë§ˆë‹¤ A+Bë¥¼ í•œ ì¤„ì— í•˜ë‚˜ì”© ìˆœì„œëŒ€ë¡œ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 5
 		 * 1 1
 		 * 12 34
 		 * 5 500
 		 * 40 60
 		 * 1000 1000
-		 * 
+		 *
 		 * 2
 		 * 46
 		 * 505
@@ -27,33 +27,33 @@ public class Main {
 		 */
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+
 		ArrayList<String> al = new ArrayList<String>();
 		String tmpStr = "";
-		
+
 		try {
 			while (true) {
 				tmpStr = br.readLine();
 				if (tmpStr.equals("")) break;
 				al.add(tmpStr);
-			}	
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+
 		try {
 			for (int i = 1; i <= Integer.parseInt(al.get(0)); i++) {
 				String[] values = al.get(i).split(" ");
 				String sum = String.valueOf((Integer.parseInt(values[0]) + Integer.parseInt(values[1])));
-				
+
 				bw.write(sum);
 				bw.newLine();
 			}
-			
+
 			bw.flush();
 		} catch (IOException e) {
 			// TODO: handle exception
 		}
 	}
-	
+
 }

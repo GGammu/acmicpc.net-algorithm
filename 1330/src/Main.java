@@ -1,26 +1,26 @@
 import java.util.Scanner;
 
 public class Main {
-	
+
 	public static void main(String[] args) {
 		/*
-		 * µÎ Á¤¼ö A¿Í B°¡ ÁÖ¾îÁ³À» ¶§, A¿Í B¸¦ ºñ±³ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		 * Ã¹Â° ÁÙ¿¡ A¿Í B°¡ ÁÖ¾îÁø´Ù. A¿Í B´Â °ø¹é ÇÑ Ä­À¸·Î ±¸ºÐµÇ¾îÁ® ÀÖ´Ù.
-		 * Ã¹Â° ÁÙ¿¡ ´ÙÀ½ ¼¼ °¡Áö Áß ÇÏ³ª¸¦ Ãâ·ÂÇÑ´Ù.
-		 * A°¡ Bº¸´Ù Å« °æ¿ì¿¡´Â '>'¸¦ Ãâ·ÂÇÑ´Ù.
-		 * A°¡ Bº¸´Ù ÀÛÀº °æ¿ì¿¡´Â '<'¸¦ Ãâ·ÂÇÑ´Ù.
-		 * A¿Í B°¡ °°Àº °æ¿ì¿¡´Â '=='¸¦ Ãâ·ÂÇÑ´Ù.
-		 * 
+		 * ë‘ ì •ìˆ˜ Aì™€ Bê°€ ì£¼ì–´ì¡Œì„ ë•Œ, Aì™€ Bë¥¼ ë¹„êµí•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
+		 * ì²«ì§¸ ì¤„ì— Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. Aì™€ BëŠ” ê³µë°± í•œ ì¹¸ìœ¼ë¡œ êµ¬ë¶„ë˜ì–´ì ¸ ìžˆë‹¤.
+		 * ì²«ì§¸ ì¤„ì— ë‹¤ìŒ ì„¸ ê°€ì§€ ì¤‘ í•˜ë‚˜ë¥¼ ì¶œë ¥í•œë‹¤.
+		 * Aê°€ Bë³´ë‹¤ í° ê²½ìš°ì—ëŠ” '>'ë¥¼ ì¶œë ¥í•œë‹¤.
+		 * Aê°€ Bë³´ë‹¤ ìž‘ì€ ê²½ìš°ì—ëŠ” '<'ë¥¼ ì¶œë ¥í•œë‹¤.
+		 * Aì™€ Bê°€ ê°™ì€ ê²½ìš°ì—ëŠ” '=='ë¥¼ ì¶œë ¥í•œë‹¤.
+		 *
 		 * 1 2
-		 * 
+		 *
 		 * <
 		 */
-		
+
 		Scanner sc = new Scanner(System.in);
 		String[] values = sc.nextLine().split(" ");
 		int A = Integer.parseInt(values[0]);
 		int B = Integer.parseInt(values[1]);
-		
+
 		if (A > B) {
 			System.out.println(">");
 		} else if (A < B) {
@@ -29,5 +29,5 @@ public class Main {
 			System.out.println("==");
 		}
 	}
-	
+
 }
