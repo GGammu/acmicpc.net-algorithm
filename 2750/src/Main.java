@@ -42,24 +42,37 @@ public class Main {
 				num[i] = Integer.parseInt(br.readLine());
 			}
 			
-			int tmp = 0;
+			// Bubble sort
+//			int tmp = 0;
+//			
+//			for (int i = 0; i < N; i++) {
+//				for (int j = 0; j < N - 1 - i; j++) {
+//					if(num[j] > num[j+1]) {
+//						tmp = num[j+1];
+//						num[j + 1] = num[j];
+//						num[j] = tmp;
+//					}
+//				}
+//			}
 			
-			for (int i = 0; i < N; i++) {
-				for (int j = 0; j < N - 1 - i; j++) {
-					if(num[j] > num[j+1]) {
-						tmp = num[j+1];
-						num[j + 1] = num[j];
-						num[j] = tmp;
-					}
+			// Insertion sort
+			int key = 0;
+			int i, j;
+			for (i = 1; i < N; i++) {
+				key = num[i];
+				for (j = i - 1; j >= 0 && num[j] > key; j--) {
+					num[j + 1] = num[j];
 				}
+				num[j + 1] = key;
 			}
 			
-			for (int i = 0; i < N; i++) {
-				bw.write(String.valueOf(num[i]));
+			for (int k = 0; k < N; k++) {
+				bw.write(String.valueOf(num[k]));
 				bw.newLine();
 			}
 			bw.flush();
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 	}
 
