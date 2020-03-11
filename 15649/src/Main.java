@@ -4,6 +4,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 public class Main {
+	
+	public static int N, M;
+	
+	public static int[] nums;
+	public static boolean[] visited;
+
+	public static BufferedReader br;
+	public static BufferedWriter bw;
 
 	public static void main(String[] args) {
 //		문제
@@ -43,19 +51,43 @@ public class Main {
 //		4 2
 //		4 3
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		br = new BufferedReader(new InputStreamReader(System.in));
+		bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		String[] input;
-		int N, M;
 
 		try {
 			input = br.readLine().split(" ");
 			N = Integer.parseInt(input[0]);
 			M = Integer.parseInt(input[1]);
+			nums = new int[M + 1];
+			visited = new boolean[N + 1];
 			
+			dfs(0);
+			
+			bw.flush();
 		} catch (Exception e) {
-			// TODO: handle exception
+		}
+	}
+
+	private static void dfs(int depth) {
+		try {
+			if (depth == M) {
+				for (int i = 1; i <= M; i++) {
+					bw.write(String.valueOf(nums[i]) + " ");
+				}
+				bw.newLine();
+			} else {
+				for (int i = 1; i <= N; i++) {
+					if (!visited[i]) {
+						nums[depth + 1] = i;
+						visited[i] = true;
+						dfs(depth + 1);
+						visited[i] = false;
+					}
+				}
+			}
+		} catch (Exception e) {
 		}
 	}
 
